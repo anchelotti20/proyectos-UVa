@@ -1,0 +1,658 @@
+Prefix(:=<http://www.semanticweb.org/pizzatutorial/ontologies/2020/PizzaTutorial#>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+Prefix(swrl:=<http://www.w3.org/2003/11/swrl#>)
+Prefix(swrla:=<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#>)
+Prefix(swrlb:=<http://www.w3.org/2003/11/swrlb#>)
+Prefix(pizzatutorial:=<http://www.semanticweb.org/pizzatutorial/ontologies/2020/PizzaTutorial#>)
+
+
+Ontology(<http://www.semanticweb.org/pizzatutorial/ontologies/2020/PizzaTutorial>
+Annotation(rdfs:comment "A tutorial ontology for the Pizza domain.")
+Annotation(rdfs:comment "Developed by Michael DeBellis. Please direct all comments and questions. to mdebellissf@gmail.com Also, see my blog for other information and resources relevant to OWL, SWRL, and other knowledge graph technology: https://www.michaeldebellis.com/blog")
+Annotation(rdfs:comment "The PizzaTutorial is licensed under the GNU Affero General Public License v3.0
+Permissions of this strongest copyleft license are conditioned on making available complete source code of licensed works and modifications, which include larger works using a licensed work, under the same license. Copyright and license notices must be preserved. Contributors provide an express grant of patent rights. When a modified version is used to provide a service over a network, the complete source code of the modified version must be made available.")
+Annotation(rdfs:comment "Versión adaptada para el Laboratorio de Ingeniería de Conocimiento, curso 2025-26. Departamento de informática, EII, Universidad de Valladolid.
+
+Carlos Alonso")
+
+Declaration(Class(pizzatutorial:AmericanaHotPizza))
+Declaration(Class(pizzatutorial:AmericanaPizza))
+Declaration(Class(pizzatutorial:AnchovyTopping))
+Declaration(Class(pizzatutorial:CaperTopping))
+Declaration(Class(pizzatutorial:CheeseTopping))
+Declaration(Class(pizzatutorial:CheesyPizza))
+Declaration(Class(pizzatutorial:Customer))
+Declaration(Class(pizzatutorial:DeepPanBase))
+Declaration(Class(pizzatutorial:Employee))
+Declaration(Class(pizzatutorial:GreenPepperTopping))
+Declaration(Class(pizzatutorial:HamTopping))
+Declaration(Class(pizzatutorial:HighCaloriePizza))
+Declaration(Class(pizzatutorial:HotVeggiePizza))
+Declaration(Class(pizzatutorial:InterestingPizza))
+Declaration(Class(pizzatutorial:JalapenoPepperTopping))
+Declaration(Class(pizzatutorial:LowCaloriePizza))
+Declaration(Class(pizzatutorial:MargheritaPizza))
+Declaration(Class(pizzatutorial:MeatTopping))
+Declaration(Class(pizzatutorial:MediumVeggiePizza))
+Declaration(Class(pizzatutorial:MozzarellaTopping))
+Declaration(Class(pizzatutorial:MushroomTopping))
+Declaration(Class(pizzatutorial:NamedPizza))
+Declaration(Class(pizzatutorial:OliveTopping))
+Declaration(Class(pizzatutorial:ParmesanTopping))
+Declaration(Class(pizzatutorial:PepperTopping))
+Declaration(Class(pizzatutorial:PepperoniTopping))
+Declaration(Class(pizzatutorial:Person))
+Declaration(Class(pizzatutorial:Pizza))
+Declaration(Class(pizzatutorial:PizzaBase))
+Declaration(Class(pizzatutorial:PizzaTopping))
+Declaration(Class(pizzatutorial:PrawnTopping))
+Declaration(Class(pizzatutorial:RedPepperTopping))
+Declaration(Class(pizzatutorial:SalamiTopping))
+Declaration(Class(pizzatutorial:SeafoodTopping))
+Declaration(Class(pizzatutorial:SohoPizza))
+Declaration(Class(pizzatutorial:Spiciness))
+Declaration(Class(pizzatutorial:SpicyBeefTopping))
+Declaration(Class(pizzatutorial:SpicyPizza))
+Declaration(Class(pizzatutorial:ThinAndCrispyBase))
+Declaration(Class(pizzatutorial:TomatoTopping))
+Declaration(Class(pizzatutorial:TunaTopping))
+Declaration(Class(pizzatutorial:VegetableTopping))
+Declaration(Class(pizzatutorial:VegetarianPizza))
+Declaration(ObjectProperty(pizzatutorial:hasBase))
+Declaration(ObjectProperty(pizzatutorial:hasIngredient))
+Declaration(ObjectProperty(pizzatutorial:hasSpiciness))
+Declaration(ObjectProperty(pizzatutorial:hasSpicinessPreference))
+Declaration(ObjectProperty(pizzatutorial:hasTopping))
+Declaration(ObjectProperty(pizzatutorial:isBaseOf))
+Declaration(ObjectProperty(pizzatutorial:isIngredientOf))
+Declaration(ObjectProperty(pizzatutorial:isMilderThan))
+Declaration(ObjectProperty(pizzatutorial:isSpicierThan))
+Declaration(ObjectProperty(pizzatutorial:isToppingOf))
+Declaration(ObjectProperty(pizzatutorial:purchasedByCustomer))
+Declaration(ObjectProperty(pizzatutorial:purchasedPizza))
+Declaration(DataProperty(pizzatutorial:hasCaloricContent))
+Declaration(DataProperty(pizzatutorial:hasDiscount))
+Declaration(DataProperty(pizzatutorial:hasPhone))
+Declaration(DataProperty(pizzatutorial:numberOfPizzasPurchased))
+Declaration(DataProperty(pizzatutorial:ssn))
+Declaration(NamedIndividual(pizzatutorial:AmericanaHotPizza1))
+Declaration(NamedIndividual(pizzatutorial:AmericanaHotPizza2))
+Declaration(NamedIndividual(pizzatutorial:AmericanaHotPizza3))
+Declaration(NamedIndividual(pizzatutorial:AmericanaPizza1))
+Declaration(NamedIndividual(pizzatutorial:AmericanaPizza2))
+Declaration(NamedIndividual(pizzatutorial:CheesyPizza1))
+Declaration(NamedIndividual(pizzatutorial:Chef))
+Declaration(NamedIndividual(pizzatutorial:ChicagoAmericanaHotPizza1))
+Declaration(NamedIndividual(pizzatutorial:CustomPizza1))
+Declaration(NamedIndividual(pizzatutorial:CustomPizza2))
+Declaration(NamedIndividual(pizzatutorial:Customer1))
+Declaration(NamedIndividual(pizzatutorial:Customer10))
+Declaration(NamedIndividual(pizzatutorial:Customer2))
+Declaration(NamedIndividual(pizzatutorial:Customer3))
+Declaration(NamedIndividual(pizzatutorial:Customer4))
+Declaration(NamedIndividual(pizzatutorial:Customer5))
+Declaration(NamedIndividual(pizzatutorial:Customer6))
+Declaration(NamedIndividual(pizzatutorial:Customer7))
+Declaration(NamedIndividual(pizzatutorial:Customer8))
+Declaration(NamedIndividual(pizzatutorial:Customer9))
+Declaration(NamedIndividual(pizzatutorial:GreenPepperTopping2))
+Declaration(NamedIndividual(pizzatutorial:Hot))
+Declaration(NamedIndividual(pizzatutorial:HotVeggiePizza1))
+Declaration(NamedIndividual(pizzatutorial:HotVeggiePizza2))
+Declaration(NamedIndividual(pizzatutorial:HotVeggiePizza3))
+Declaration(NamedIndividual(pizzatutorial:Manager))
+Declaration(NamedIndividual(pizzatutorial:MargheritaPizza1))
+Declaration(NamedIndividual(pizzatutorial:MargheritaPizza2))
+Declaration(NamedIndividual(pizzatutorial:Medium))
+Declaration(NamedIndividual(pizzatutorial:MediumVeggiePizza1))
+Declaration(NamedIndividual(pizzatutorial:Mild))
+Declaration(NamedIndividual(pizzatutorial:MushroomTopping2))
+Declaration(NamedIndividual(pizzatutorial:OliveTopping1))
+Declaration(NamedIndividual(pizzatutorial:SohoPizza1))
+Declaration(NamedIndividual(pizzatutorial:SohoPizza2))
+Declaration(NamedIndividual(pizzatutorial:SpicyBeefTopping1))
+Declaration(NamedIndividual(pizzatutorial:Waiter1))
+Declaration(NamedIndividual(pizzatutorial:Waiter2))
+Declaration(AnnotationProperty(swrla:isRuleEnabled))
+
+############################
+#   Object Properties
+############################
+
+# Object Property: pizzatutorial:hasBase (pizzatutorial:hasBase)
+
+SubObjectPropertyOf(pizzatutorial:hasBase pizzatutorial:hasIngredient)
+InverseObjectProperties(pizzatutorial:hasBase pizzatutorial:isBaseOf)
+ObjectPropertyDomain(pizzatutorial:hasBase pizzatutorial:Pizza)
+ObjectPropertyRange(pizzatutorial:hasBase pizzatutorial:PizzaBase)
+
+# Object Property: pizzatutorial:hasIngredient (pizzatutorial:hasIngredient)
+
+InverseObjectProperties(pizzatutorial:hasIngredient pizzatutorial:isIngredientOf)
+
+# Object Property: pizzatutorial:hasSpiciness (pizzatutorial:hasSpiciness)
+
+ObjectPropertyDomain(pizzatutorial:hasSpiciness pizzatutorial:PizzaTopping)
+ObjectPropertyRange(pizzatutorial:hasSpiciness pizzatutorial:Spiciness)
+
+# Object Property: pizzatutorial:hasSpicinessPreference (pizzatutorial:hasSpicinessPreference)
+
+ObjectPropertyDomain(pizzatutorial:hasSpicinessPreference pizzatutorial:Customer)
+ObjectPropertyRange(pizzatutorial:hasSpicinessPreference pizzatutorial:Spiciness)
+
+# Object Property: pizzatutorial:hasTopping (pizzatutorial:hasTopping)
+
+SubObjectPropertyOf(pizzatutorial:hasTopping pizzatutorial:hasIngredient)
+InverseObjectProperties(pizzatutorial:hasTopping pizzatutorial:isToppingOf)
+ObjectPropertyDomain(pizzatutorial:hasTopping pizzatutorial:Pizza)
+ObjectPropertyRange(pizzatutorial:hasTopping pizzatutorial:PizzaTopping)
+
+# Object Property: pizzatutorial:isBaseOf (pizzatutorial:isBaseOf)
+
+SubObjectPropertyOf(pizzatutorial:isBaseOf pizzatutorial:isIngredientOf)
+
+# Object Property: pizzatutorial:isIngredientOf (pizzatutorial:isIngredientOf)
+
+FunctionalObjectProperty(pizzatutorial:isIngredientOf)
+
+# Object Property: pizzatutorial:isMilderThan (pizzatutorial:isMilderThan)
+
+InverseObjectProperties(pizzatutorial:isMilderThan pizzatutorial:isSpicierThan)
+
+# Object Property: pizzatutorial:isSpicierThan (pizzatutorial:isSpicierThan)
+
+TransitiveObjectProperty(pizzatutorial:isSpicierThan)
+ObjectPropertyDomain(pizzatutorial:isSpicierThan pizzatutorial:Spiciness)
+ObjectPropertyRange(pizzatutorial:isSpicierThan pizzatutorial:Spiciness)
+
+# Object Property: pizzatutorial:isToppingOf (pizzatutorial:isToppingOf)
+
+SubObjectPropertyOf(pizzatutorial:isToppingOf pizzatutorial:isIngredientOf)
+
+# Object Property: pizzatutorial:purchasedByCustomer (pizzatutorial:purchasedByCustomer)
+
+InverseObjectProperties(pizzatutorial:purchasedByCustomer pizzatutorial:purchasedPizza)
+FunctionalObjectProperty(pizzatutorial:purchasedByCustomer)
+
+# Object Property: pizzatutorial:purchasedPizza (pizzatutorial:purchasedPizza)
+
+ObjectPropertyDomain(pizzatutorial:purchasedPizza pizzatutorial:Customer)
+ObjectPropertyRange(pizzatutorial:purchasedPizza pizzatutorial:Pizza)
+
+
+############################
+#   Data Properties
+############################
+
+# Data Property: pizzatutorial:hasCaloricContent (pizzatutorial:hasCaloricContent)
+
+DataPropertyDomain(pizzatutorial:hasCaloricContent pizzatutorial:Pizza)
+DataPropertyRange(pizzatutorial:hasCaloricContent xsd:integer)
+
+# Data Property: pizzatutorial:hasDiscount (pizzatutorial:hasDiscount)
+
+DataPropertyDomain(pizzatutorial:hasDiscount pizzatutorial:Customer)
+DataPropertyRange(pizzatutorial:hasDiscount xsd:decimal)
+
+# Data Property: pizzatutorial:hasPhone (pizzatutorial:hasPhone)
+
+DataPropertyDomain(pizzatutorial:hasPhone pizzatutorial:Person)
+DataPropertyRange(pizzatutorial:hasPhone xsd:string)
+
+# Data Property: pizzatutorial:numberOfPizzasPurchased (pizzatutorial:numberOfPizzasPurchased)
+
+DataPropertyDomain(pizzatutorial:numberOfPizzasPurchased pizzatutorial:Customer)
+DataPropertyRange(pizzatutorial:numberOfPizzasPurchased xsd:integer)
+
+# Data Property: pizzatutorial:ssn (pizzatutorial:ssn)
+
+DataPropertyDomain(pizzatutorial:ssn pizzatutorial:Employee)
+DataPropertyRange(pizzatutorial:ssn xsd:string)
+
+
+
+############################
+#   Classes
+############################
+
+# Class: pizzatutorial:AmericanaHotPizza (pizzatutorial:AmericanaHotPizza)
+
+AnnotationAssertion(rdfs:comment pizzatutorial:AmericanaHotPizza "A pizza that only has Mozzarella, Tomato, Jalapeno, and Pepperoni toppings")
+SubClassOf(pizzatutorial:AmericanaHotPizza pizzatutorial:AmericanaPizza)
+SubClassOf(pizzatutorial:AmericanaHotPizza ObjectSomeValuesFrom(pizzatutorial:hasTopping pizzatutorial:JalapenoPepperTopping))
+SubClassOf(pizzatutorial:AmericanaHotPizza ObjectSomeValuesFrom(pizzatutorial:hasTopping pizzatutorial:MozzarellaTopping))
+SubClassOf(pizzatutorial:AmericanaHotPizza ObjectSomeValuesFrom(pizzatutorial:hasTopping pizzatutorial:PepperoniTopping))
+SubClassOf(pizzatutorial:AmericanaHotPizza ObjectSomeValuesFrom(pizzatutorial:hasTopping pizzatutorial:TomatoTopping))
+
+# Class: pizzatutorial:AmericanaPizza (pizzatutorial:AmericanaPizza)
+
+AnnotationAssertion(rdfs:comment pizzatutorial:AmericanaPizza "A pizza that only has Mozzarella, Tomato and Pepperoni toppings")
+SubClassOf(pizzatutorial:AmericanaPizza pizzatutorial:NamedPizza)
+SubClassOf(pizzatutorial:AmericanaPizza ObjectSomeValuesFrom(pizzatutorial:hasTopping pizzatutorial:MozzarellaTopping))
+SubClassOf(pizzatutorial:AmericanaPizza ObjectSomeValuesFrom(pizzatutorial:hasTopping pizzatutorial:PepperoniTopping))
+SubClassOf(pizzatutorial:AmericanaPizza ObjectSomeValuesFrom(pizzatutorial:hasTopping pizzatutorial:TomatoTopping))
+
+# Class: pizzatutorial:AnchovyTopping (pizzatutorial:AnchovyTopping)
+
+SubClassOf(pizzatutorial:AnchovyTopping pizzatutorial:SeafoodTopping)
+
+# Class: pizzatutorial:CaperTopping (pizzatutorial:CaperTopping)
+
+SubClassOf(pizzatutorial:CaperTopping pizzatutorial:VegetableTopping)
+SubClassOf(pizzatutorial:CaperTopping ObjectHasValue(pizzatutorial:hasSpiciness pizzatutorial:Mild))
+
+# Class: pizzatutorial:CheeseTopping (pizzatutorial:CheeseTopping)
+
+SubClassOf(pizzatutorial:CheeseTopping pizzatutorial:PizzaTopping)
+SubClassOf(pizzatutorial:CheeseTopping ObjectHasValue(pizzatutorial:hasSpiciness pizzatutorial:Mild))
+
+# Class: pizzatutorial:CheesyPizza (pizzatutorial:CheesyPizza)
+
+EquivalentClasses(pizzatutorial:CheesyPizza ObjectIntersectionOf(pizzatutorial:Pizza ObjectSomeValuesFrom(pizzatutorial:hasTopping pizzatutorial:CheeseTopping)))
+
+# Class: pizzatutorial:Customer (pizzatutorial:Customer)
+
+EquivalentClasses(pizzatutorial:Customer ObjectIntersectionOf(pizzatutorial:Person ObjectSomeValuesFrom(pizzatutorial:purchasedPizza pizzatutorial:Pizza) DataSomeValuesFrom(pizzatutorial:hasPhone xsd:string)))
+
+# Class: pizzatutorial:DeepPanBase (pizzatutorial:DeepPanBase)
+
+SubClassOf(pizzatutorial:DeepPanBase pizzatutorial:PizzaBase)
+DisjointClasses(pizzatutorial:DeepPanBase pizzatutorial:ThinAndCrispyBase)
+
+# Class: pizzatutorial:Employee (pizzatutorial:Employee)
+
+SubClassOf(pizzatutorial:Employee ObjectIntersectionOf(pizzatutorial:Person DataMinCardinality(1 pizzatutorial:ssn xsd:string)))
+
+# Class: pizzatutorial:GreenPepperTopping (pizzatutorial:GreenPepperTopping)
+
+SubClassOf(pizzatutorial:GreenPepperTopping pizzatutorial:PepperTopping)
+SubClassOf(pizzatutorial:GreenPepperTopping ObjectHasValue(pizzatutorial:hasSpiciness pizzatutorial:Medium))
+
+# Class: pizzatutorial:HamTopping (pizzatutorial:HamTopping)
+
+SubClassOf(pizzatutorial:HamTopping pizzatutorial:MeatTopping)
+SubClassOf(pizzatutorial:HamTopping ObjectHasValue(pizzatutorial:hasSpiciness pizzatutorial:Mild))
+
+# Class: pizzatutorial:HighCaloriePizza (pizzatutorial:HighCaloriePizza)
+
+EquivalentClasses(pizzatutorial:HighCaloriePizza ObjectIntersectionOf(pizzatutorial:Pizza DataSomeValuesFrom(pizzatutorial:hasCaloricContent DatatypeRestriction(xsd:integer xsd:minInclusive "400"^^xsd:integer))))
+
+# Class: pizzatutorial:HotVeggiePizza (pizzatutorial:HotVeggiePizza)
+
+EquivalentClasses(pizzatutorial:HotVeggiePizza ObjectIntersectionOf(pizzatutorial:VegetarianPizza ObjectSomeValuesFrom(pizzatutorial:hasTopping ObjectHasValue(pizzatutorial:hasSpiciness pizzatutorial:Hot))))
+
+# Class: pizzatutorial:InterestingPizza (pizzatutorial:InterestingPizza)
+
+EquivalentClasses(pizzatutorial:InterestingPizza ObjectIntersectionOf(pizzatutorial:Pizza ObjectMinCardinality(3 pizzatutorial:hasTopping pizzatutorial:PizzaTopping)))
+
+# Class: pizzatutorial:JalapenoPepperTopping (pizzatutorial:JalapenoPepperTopping)
+
+SubClassOf(pizzatutorial:JalapenoPepperTopping pizzatutorial:PepperTopping)
+SubClassOf(pizzatutorial:JalapenoPepperTopping ObjectHasValue(pizzatutorial:hasSpiciness pizzatutorial:Hot))
+
+# Class: pizzatutorial:LowCaloriePizza (pizzatutorial:LowCaloriePizza)
+
+EquivalentClasses(pizzatutorial:LowCaloriePizza ObjectIntersectionOf(pizzatutorial:Pizza DataSomeValuesFrom(pizzatutorial:hasCaloricContent DatatypeRestriction(xsd:integer xsd:maxExclusive "400"^^xsd:integer))))
+
+# Class: pizzatutorial:MargheritaPizza (pizzatutorial:MargheritaPizza)
+
+AnnotationAssertion(rdfs:comment pizzatutorial:MargheritaPizza "A pizza that only has Mozzarella and Tomato toppings")
+SubClassOf(pizzatutorial:MargheritaPizza pizzatutorial:NamedPizza)
+SubClassOf(pizzatutorial:MargheritaPizza ObjectSomeValuesFrom(pizzatutorial:hasTopping pizzatutorial:MozzarellaTopping))
+SubClassOf(pizzatutorial:MargheritaPizza ObjectSomeValuesFrom(pizzatutorial:hasTopping pizzatutorial:TomatoTopping))
+SubClassOf(pizzatutorial:MargheritaPizza ObjectAllValuesFrom(pizzatutorial:hasTopping ObjectUnionOf(pizzatutorial:MozzarellaTopping pizzatutorial:TomatoTopping)))
+
+# Class: pizzatutorial:MeatTopping (pizzatutorial:MeatTopping)
+
+SubClassOf(pizzatutorial:MeatTopping pizzatutorial:PizzaTopping)
+
+# Class: pizzatutorial:MediumVeggiePizza (pizzatutorial:MediumVeggiePizza)
+
+EquivalentClasses(pizzatutorial:MediumVeggiePizza ObjectIntersectionOf(pizzatutorial:VegetarianPizza ObjectAllValuesFrom(pizzatutorial:hasTopping ObjectSomeValuesFrom(pizzatutorial:hasSpiciness ObjectHasValue(pizzatutorial:isMilderThan pizzatutorial:Hot)))))
+
+# Class: pizzatutorial:MozzarellaTopping (pizzatutorial:MozzarellaTopping)
+
+SubClassOf(pizzatutorial:MozzarellaTopping pizzatutorial:CheeseTopping)
+DisjointClasses(pizzatutorial:MozzarellaTopping pizzatutorial:ParmesanTopping)
+
+# Class: pizzatutorial:MushroomTopping (pizzatutorial:MushroomTopping)
+
+SubClassOf(pizzatutorial:MushroomTopping pizzatutorial:VegetableTopping)
+SubClassOf(pizzatutorial:MushroomTopping ObjectHasValue(pizzatutorial:hasSpiciness pizzatutorial:Mild))
+
+# Class: pizzatutorial:NamedPizza (pizzatutorial:NamedPizza)
+
+SubClassOf(pizzatutorial:NamedPizza pizzatutorial:Pizza)
+
+# Class: pizzatutorial:OliveTopping (pizzatutorial:OliveTopping)
+
+SubClassOf(pizzatutorial:OliveTopping pizzatutorial:VegetableTopping)
+SubClassOf(pizzatutorial:OliveTopping ObjectHasValue(pizzatutorial:hasSpiciness pizzatutorial:Mild))
+
+# Class: pizzatutorial:ParmesanTopping (pizzatutorial:ParmesanTopping)
+
+SubClassOf(pizzatutorial:ParmesanTopping pizzatutorial:CheeseTopping)
+
+# Class: pizzatutorial:PepperTopping (pizzatutorial:PepperTopping)
+
+SubClassOf(pizzatutorial:PepperTopping pizzatutorial:VegetableTopping)
+
+# Class: pizzatutorial:PepperoniTopping (pizzatutorial:PepperoniTopping)
+
+SubClassOf(pizzatutorial:PepperoniTopping pizzatutorial:MeatTopping)
+SubClassOf(pizzatutorial:PepperoniTopping ObjectHasValue(pizzatutorial:hasSpiciness pizzatutorial:Medium))
+
+# Class: pizzatutorial:Pizza (pizzatutorial:Pizza)
+
+SubClassOf(pizzatutorial:Pizza ObjectSomeValuesFrom(pizzatutorial:hasBase pizzatutorial:PizzaBase))
+SubClassOf(pizzatutorial:Pizza DataSomeValuesFrom(pizzatutorial:hasCaloricContent xsd:integer))
+
+# Class: pizzatutorial:PizzaBase (pizzatutorial:PizzaBase)
+
+
+# Class: pizzatutorial:PizzaTopping (pizzatutorial:PizzaTopping)
+
+
+# Class: pizzatutorial:PrawnTopping (pizzatutorial:PrawnTopping)
+
+SubClassOf(pizzatutorial:PrawnTopping pizzatutorial:SeafoodTopping)
+
+# Class: pizzatutorial:RedPepperTopping (pizzatutorial:RedPepperTopping)
+
+SubClassOf(pizzatutorial:RedPepperTopping pizzatutorial:PepperTopping)
+SubClassOf(pizzatutorial:RedPepperTopping ObjectHasValue(pizzatutorial:hasSpiciness pizzatutorial:Hot))
+
+# Class: pizzatutorial:SalamiTopping (pizzatutorial:SalamiTopping)
+
+SubClassOf(pizzatutorial:SalamiTopping pizzatutorial:MeatTopping)
+SubClassOf(pizzatutorial:SalamiTopping ObjectHasValue(pizzatutorial:hasSpiciness pizzatutorial:Medium))
+
+# Class: pizzatutorial:SeafoodTopping (pizzatutorial:SeafoodTopping)
+
+SubClassOf(pizzatutorial:SeafoodTopping pizzatutorial:PizzaTopping)
+SubClassOf(pizzatutorial:SeafoodTopping ObjectHasValue(pizzatutorial:hasSpiciness pizzatutorial:Mild))
+
+# Class: pizzatutorial:SohoPizza (pizzatutorial:SohoPizza)
+
+AnnotationAssertion(rdfs:comment pizzatutorial:SohoPizza "A pizza that  has Mozzarella, Olives, Parmesan, and Tomato toppings")
+SubClassOf(pizzatutorial:SohoPizza pizzatutorial:NamedPizza)
+SubClassOf(pizzatutorial:SohoPizza ObjectSomeValuesFrom(pizzatutorial:hasTopping pizzatutorial:MozzarellaTopping))
+SubClassOf(pizzatutorial:SohoPizza ObjectSomeValuesFrom(pizzatutorial:hasTopping pizzatutorial:OliveTopping))
+SubClassOf(pizzatutorial:SohoPizza ObjectSomeValuesFrom(pizzatutorial:hasTopping pizzatutorial:ParmesanTopping))
+SubClassOf(pizzatutorial:SohoPizza ObjectSomeValuesFrom(pizzatutorial:hasTopping pizzatutorial:TomatoTopping))
+SubClassOf(pizzatutorial:SohoPizza ObjectAllValuesFrom(pizzatutorial:hasTopping ObjectUnionOf(pizzatutorial:MozzarellaTopping pizzatutorial:OliveTopping pizzatutorial:ParmesanTopping pizzatutorial:TomatoTopping)))
+
+# Class: pizzatutorial:Spiciness (pizzatutorial:Spiciness)
+
+EquivalentClasses(pizzatutorial:Spiciness ObjectOneOf(pizzatutorial:Hot pizzatutorial:Medium pizzatutorial:Mild))
+
+# Class: pizzatutorial:SpicyBeefTopping (pizzatutorial:SpicyBeefTopping)
+
+SubClassOf(pizzatutorial:SpicyBeefTopping pizzatutorial:MeatTopping)
+SubClassOf(pizzatutorial:SpicyBeefTopping ObjectHasValue(pizzatutorial:hasSpiciness pizzatutorial:Hot))
+
+# Class: pizzatutorial:SpicyPizza (pizzatutorial:SpicyPizza)
+
+EquivalentClasses(pizzatutorial:SpicyPizza ObjectIntersectionOf(pizzatutorial:Pizza ObjectSomeValuesFrom(pizzatutorial:hasTopping ObjectHasValue(pizzatutorial:hasSpiciness pizzatutorial:Hot))))
+
+# Class: pizzatutorial:ThinAndCrispyBase (pizzatutorial:ThinAndCrispyBase)
+
+SubClassOf(pizzatutorial:ThinAndCrispyBase pizzatutorial:PizzaBase)
+
+# Class: pizzatutorial:TomatoTopping (pizzatutorial:TomatoTopping)
+
+SubClassOf(pizzatutorial:TomatoTopping pizzatutorial:VegetableTopping)
+
+# Class: pizzatutorial:TunaTopping (pizzatutorial:TunaTopping)
+
+SubClassOf(pizzatutorial:TunaTopping pizzatutorial:SeafoodTopping)
+
+# Class: pizzatutorial:VegetableTopping (pizzatutorial:VegetableTopping)
+
+SubClassOf(pizzatutorial:VegetableTopping pizzatutorial:PizzaTopping)
+
+# Class: pizzatutorial:VegetarianPizza (pizzatutorial:VegetarianPizza)
+
+EquivalentClasses(pizzatutorial:VegetarianPizza ObjectIntersectionOf(pizzatutorial:Pizza ObjectAllValuesFrom(pizzatutorial:hasTopping ObjectUnionOf(pizzatutorial:CheeseTopping pizzatutorial:VegetableTopping))))
+
+
+############################
+#   Named Individuals
+############################
+
+# Individual: pizzatutorial:AmericanaHotPizza1 (pizzatutorial:AmericanaHotPizza1)
+
+ClassAssertion(pizzatutorial:AmericanaHotPizza pizzatutorial:AmericanaHotPizza1)
+DataPropertyAssertion(pizzatutorial:hasCaloricContent pizzatutorial:AmericanaHotPizza1 "767"^^xsd:integer)
+
+# Individual: pizzatutorial:AmericanaHotPizza2 (pizzatutorial:AmericanaHotPizza2)
+
+ClassAssertion(pizzatutorial:AmericanaHotPizza pizzatutorial:AmericanaHotPizza2)
+DataPropertyAssertion(pizzatutorial:hasCaloricContent pizzatutorial:AmericanaHotPizza2 "675"^^xsd:integer)
+
+# Individual: pizzatutorial:AmericanaHotPizza3 (pizzatutorial:AmericanaHotPizza3)
+
+ClassAssertion(pizzatutorial:AmericanaHotPizza pizzatutorial:AmericanaHotPizza3)
+
+# Individual: pizzatutorial:AmericanaPizza1 (pizzatutorial:AmericanaPizza1)
+
+ClassAssertion(pizzatutorial:AmericanaPizza pizzatutorial:AmericanaPizza1)
+DataPropertyAssertion(pizzatutorial:hasCaloricContent pizzatutorial:AmericanaPizza1 "723"^^xsd:integer)
+
+# Individual: pizzatutorial:AmericanaPizza2 (pizzatutorial:AmericanaPizza2)
+
+ClassAssertion(pizzatutorial:AmericanaPizza pizzatutorial:AmericanaPizza2)
+DataPropertyAssertion(pizzatutorial:hasCaloricContent pizzatutorial:AmericanaPizza2 "543"^^xsd:integer)
+
+# Individual: pizzatutorial:CheesyPizza1 (pizzatutorial:CheesyPizza1)
+
+ClassAssertion(pizzatutorial:CheesyPizza pizzatutorial:CheesyPizza1)
+DataPropertyAssertion(pizzatutorial:hasCaloricContent pizzatutorial:CheesyPizza1 "378"^^xsd:integer)
+
+# Individual: pizzatutorial:Chef (pizzatutorial:Chef)
+
+ClassAssertion(pizzatutorial:Employee pizzatutorial:Chef)
+DataPropertyAssertion(pizzatutorial:hasPhone pizzatutorial:Chef "415-555-1234")
+DataPropertyAssertion(pizzatutorial:ssn pizzatutorial:Chef "333-22-2334")
+DataPropertyAssertion(pizzatutorial:ssn pizzatutorial:Chef "333-22-4444")
+
+# Individual: pizzatutorial:ChicagoAmericanaHotPizza1 (pizzatutorial:ChicagoAmericanaHotPizza1)
+
+ClassAssertion(pizzatutorial:AmericanaHotPizza pizzatutorial:ChicagoAmericanaHotPizza1)
+
+# Individual: pizzatutorial:CustomPizza1 (pizzatutorial:CustomPizza1)
+
+ClassAssertion(pizzatutorial:Pizza pizzatutorial:CustomPizza1)
+ObjectPropertyAssertion(pizzatutorial:hasTopping pizzatutorial:CustomPizza1 pizzatutorial:OliveTopping1)
+ObjectPropertyAssertion(pizzatutorial:hasTopping pizzatutorial:CustomPizza1 pizzatutorial:SpicyBeefTopping1)
+
+# Individual: pizzatutorial:CustomPizza2 (pizzatutorial:CustomPizza2)
+
+ClassAssertion(pizzatutorial:Pizza pizzatutorial:CustomPizza2)
+ObjectPropertyAssertion(pizzatutorial:hasTopping pizzatutorial:CustomPizza2 pizzatutorial:GreenPepperTopping2)
+ObjectPropertyAssertion(pizzatutorial:hasTopping pizzatutorial:CustomPizza2 pizzatutorial:MushroomTopping2)
+
+# Individual: pizzatutorial:Customer1 (pizzatutorial:Customer1)
+
+ClassAssertion(pizzatutorial:Customer pizzatutorial:Customer1)
+ObjectPropertyAssertion(pizzatutorial:hasSpicinessPreference pizzatutorial:Customer1 pizzatutorial:Hot)
+ObjectPropertyAssertion(pizzatutorial:purchasedPizza pizzatutorial:Customer1 pizzatutorial:AmericanaHotPizza1)
+ObjectPropertyAssertion(pizzatutorial:purchasedPizza pizzatutorial:Customer1 pizzatutorial:AmericanaHotPizza2)
+DataPropertyAssertion(pizzatutorial:hasPhone pizzatutorial:Customer1 "555-111-3332")
+DataPropertyAssertion(pizzatutorial:numberOfPizzasPurchased pizzatutorial:Customer1 "2"^^xsd:integer)
+
+# Individual: pizzatutorial:Customer10 (pizzatutorial:Customer10)
+
+ClassAssertion(pizzatutorial:Customer pizzatutorial:Customer10)
+ObjectPropertyAssertion(pizzatutorial:hasSpicinessPreference pizzatutorial:Customer10 pizzatutorial:Mild)
+DataPropertyAssertion(pizzatutorial:hasDiscount pizzatutorial:Customer10 "2.0"^^xsd:decimal)
+DataPropertyAssertion(pizzatutorial:hasPhone pizzatutorial:Customer10 "555-111-3335")
+DataPropertyAssertion(pizzatutorial:numberOfPizzasPurchased pizzatutorial:Customer10 "1"^^xsd:integer)
+
+# Individual: pizzatutorial:Customer2 (pizzatutorial:Customer2)
+
+ClassAssertion(pizzatutorial:Customer pizzatutorial:Customer2)
+ObjectPropertyAssertion(pizzatutorial:hasSpicinessPreference pizzatutorial:Customer2 pizzatutorial:Medium)
+ObjectPropertyAssertion(pizzatutorial:purchasedPizza pizzatutorial:Customer2 pizzatutorial:CustomPizza2)
+ObjectPropertyAssertion(pizzatutorial:purchasedPizza pizzatutorial:Customer2 pizzatutorial:MargheritaPizza1)
+DataPropertyAssertion(pizzatutorial:hasPhone pizzatutorial:Customer2 "555-1113342")
+DataPropertyAssertion(pizzatutorial:numberOfPizzasPurchased pizzatutorial:Customer2 "2"^^xsd:integer)
+
+# Individual: pizzatutorial:Customer3 (pizzatutorial:Customer3)
+
+ClassAssertion(pizzatutorial:Customer pizzatutorial:Customer3)
+ObjectPropertyAssertion(pizzatutorial:hasSpicinessPreference pizzatutorial:Customer3 pizzatutorial:Mild)
+ObjectPropertyAssertion(pizzatutorial:purchasedPizza pizzatutorial:Customer3 pizzatutorial:MargheritaPizza2)
+ObjectPropertyAssertion(pizzatutorial:purchasedPizza pizzatutorial:Customer3 pizzatutorial:SohoPizza1)
+DataPropertyAssertion(pizzatutorial:numberOfPizzasPurchased pizzatutorial:Customer3 "2"^^xsd:integer)
+
+# Individual: pizzatutorial:Customer4 (pizzatutorial:Customer4)
+
+ClassAssertion(pizzatutorial:Customer pizzatutorial:Customer4)
+ObjectPropertyAssertion(pizzatutorial:hasSpicinessPreference pizzatutorial:Customer4 pizzatutorial:Hot)
+ObjectPropertyAssertion(pizzatutorial:purchasedPizza pizzatutorial:Customer4 pizzatutorial:AmericanaHotPizza3)
+ObjectPropertyAssertion(pizzatutorial:purchasedPizza pizzatutorial:Customer4 pizzatutorial:HotVeggiePizza1)
+DataPropertyAssertion(pizzatutorial:hasPhone pizzatutorial:Customer4 "555-111-3339")
+DataPropertyAssertion(pizzatutorial:numberOfPizzasPurchased pizzatutorial:Customer4 "3"^^xsd:integer)
+
+# Individual: pizzatutorial:Customer5 (pizzatutorial:Customer5)
+
+ClassAssertion(pizzatutorial:Customer pizzatutorial:Customer5)
+ObjectPropertyAssertion(pizzatutorial:hasSpicinessPreference pizzatutorial:Customer5 pizzatutorial:Medium)
+ObjectPropertyAssertion(pizzatutorial:purchasedPizza pizzatutorial:Customer5 pizzatutorial:AmericanaPizza1)
+ObjectPropertyAssertion(pizzatutorial:purchasedPizza pizzatutorial:Customer5 pizzatutorial:MediumVeggiePizza1)
+DataPropertyAssertion(pizzatutorial:hasPhone pizzatutorial:Customer5 "555-111-3339")
+DataPropertyAssertion(pizzatutorial:numberOfPizzasPurchased pizzatutorial:Customer5 "2"^^xsd:integer)
+
+# Individual: pizzatutorial:Customer6 (pizzatutorial:Customer6)
+
+ClassAssertion(pizzatutorial:Customer pizzatutorial:Customer6)
+ObjectPropertyAssertion(pizzatutorial:hasSpicinessPreference pizzatutorial:Customer6 pizzatutorial:Medium)
+ObjectPropertyAssertion(pizzatutorial:purchasedPizza pizzatutorial:Customer6 pizzatutorial:AmericanaPizza2)
+DataPropertyAssertion(pizzatutorial:hasPhone pizzatutorial:Customer6 "555-111-3338")
+DataPropertyAssertion(pizzatutorial:numberOfPizzasPurchased pizzatutorial:Customer6 "1"^^xsd:integer)
+
+# Individual: pizzatutorial:Customer7 (pizzatutorial:Customer7)
+
+ClassAssertion(pizzatutorial:Customer pizzatutorial:Customer7)
+ObjectPropertyAssertion(pizzatutorial:hasSpicinessPreference pizzatutorial:Customer7 pizzatutorial:Mild)
+ObjectPropertyAssertion(pizzatutorial:purchasedPizza pizzatutorial:Customer7 pizzatutorial:CheesyPizza1)
+DataPropertyAssertion(pizzatutorial:hasPhone pizzatutorial:Customer7 "555-111-3337")
+DataPropertyAssertion(pizzatutorial:numberOfPizzasPurchased pizzatutorial:Customer7 "1"^^xsd:integer)
+
+# Individual: pizzatutorial:Customer8 (pizzatutorial:Customer8)
+
+ClassAssertion(pizzatutorial:Customer pizzatutorial:Customer8)
+ObjectPropertyAssertion(pizzatutorial:hasSpicinessPreference pizzatutorial:Customer8 pizzatutorial:Hot)
+ObjectPropertyAssertion(pizzatutorial:purchasedPizza pizzatutorial:Customer8 pizzatutorial:ChicagoAmericanaHotPizza1)
+ObjectPropertyAssertion(pizzatutorial:purchasedPizza pizzatutorial:Customer8 pizzatutorial:CustomPizza1)
+DataPropertyAssertion(pizzatutorial:hasPhone pizzatutorial:Customer8 "555-111-3336")
+DataPropertyAssertion(pizzatutorial:numberOfPizzasPurchased pizzatutorial:Customer8 "2"^^xsd:integer)
+
+# Individual: pizzatutorial:Customer9 (pizzatutorial:Customer9)
+
+ClassAssertion(pizzatutorial:Customer pizzatutorial:Customer9)
+ObjectPropertyAssertion(pizzatutorial:hasSpicinessPreference pizzatutorial:Customer9 pizzatutorial:Hot)
+ObjectPropertyAssertion(pizzatutorial:purchasedPizza pizzatutorial:Customer9 pizzatutorial:HotVeggiePizza3)
+DataPropertyAssertion(pizzatutorial:hasPhone pizzatutorial:Customer9 "555-111-3334")
+DataPropertyAssertion(pizzatutorial:numberOfPizzasPurchased pizzatutorial:Customer9 "1"^^xsd:integer)
+
+# Individual: pizzatutorial:GreenPepperTopping2 (pizzatutorial:GreenPepperTopping2)
+
+ClassAssertion(pizzatutorial:GreenPepperTopping pizzatutorial:GreenPepperTopping2)
+
+# Individual: pizzatutorial:Hot (pizzatutorial:Hot)
+
+ObjectPropertyAssertion(pizzatutorial:isSpicierThan pizzatutorial:Hot pizzatutorial:Medium)
+
+# Individual: pizzatutorial:HotVeggiePizza1 (pizzatutorial:HotVeggiePizza1)
+
+ClassAssertion(pizzatutorial:HotVeggiePizza pizzatutorial:HotVeggiePizza1)
+
+# Individual: pizzatutorial:HotVeggiePizza2 (pizzatutorial:HotVeggiePizza2)
+
+ClassAssertion(pizzatutorial:HotVeggiePizza pizzatutorial:HotVeggiePizza2)
+ObjectPropertyAssertion(pizzatutorial:purchasedByCustomer pizzatutorial:HotVeggiePizza2 pizzatutorial:Customer4)
+
+# Individual: pizzatutorial:HotVeggiePizza3 (pizzatutorial:HotVeggiePizza3)
+
+ClassAssertion(pizzatutorial:HotVeggiePizza pizzatutorial:HotVeggiePizza3)
+
+# Individual: pizzatutorial:Manager (pizzatutorial:Manager)
+
+ClassAssertion(pizzatutorial:Employee pizzatutorial:Manager)
+DataPropertyAssertion(pizzatutorial:hasPhone pizzatutorial:Manager "123-345-4567")
+DataPropertyAssertion(pizzatutorial:hasPhone pizzatutorial:Manager "415-5554567")
+DataPropertyAssertion(pizzatutorial:ssn pizzatutorial:Manager "321-23-4532")
+
+# Individual: pizzatutorial:MargheritaPizza1 (pizzatutorial:MargheritaPizza1)
+
+ClassAssertion(pizzatutorial:MargheritaPizza pizzatutorial:MargheritaPizza1)
+DataPropertyAssertion(pizzatutorial:hasCaloricContent pizzatutorial:MargheritaPizza1 "263"^^xsd:integer)
+
+# Individual: pizzatutorial:MargheritaPizza2 (pizzatutorial:MargheritaPizza2)
+
+ClassAssertion(pizzatutorial:MargheritaPizza pizzatutorial:MargheritaPizza2)
+DataPropertyAssertion(pizzatutorial:hasCaloricContent pizzatutorial:MargheritaPizza2 "376"^^xsd:integer)
+
+# Individual: pizzatutorial:Medium (pizzatutorial:Medium)
+
+ObjectPropertyAssertion(pizzatutorial:isSpicierThan pizzatutorial:Medium pizzatutorial:Mild)
+
+# Individual: pizzatutorial:MediumVeggiePizza1 (pizzatutorial:MediumVeggiePizza1)
+
+ClassAssertion(pizzatutorial:MediumVeggiePizza pizzatutorial:MediumVeggiePizza1)
+
+# Individual: pizzatutorial:Mild (pizzatutorial:Mild)
+
+ClassAssertion(pizzatutorial:Spiciness pizzatutorial:Mild)
+
+# Individual: pizzatutorial:MushroomTopping2 (pizzatutorial:MushroomTopping2)
+
+ClassAssertion(pizzatutorial:MushroomTopping pizzatutorial:MushroomTopping2)
+
+# Individual: pizzatutorial:OliveTopping1 (pizzatutorial:OliveTopping1)
+
+ClassAssertion(pizzatutorial:OliveTopping pizzatutorial:OliveTopping1)
+
+# Individual: pizzatutorial:SohoPizza1 (pizzatutorial:SohoPizza1)
+
+ClassAssertion(pizzatutorial:SohoPizza pizzatutorial:SohoPizza1)
+DataPropertyAssertion(pizzatutorial:hasCaloricContent pizzatutorial:SohoPizza1 "342"^^xsd:integer)
+
+# Individual: pizzatutorial:SohoPizza2 (pizzatutorial:SohoPizza2)
+
+ClassAssertion(pizzatutorial:SohoPizza pizzatutorial:SohoPizza2)
+ObjectPropertyAssertion(pizzatutorial:purchasedByCustomer pizzatutorial:SohoPizza2 pizzatutorial:Customer10)
+DataPropertyAssertion(pizzatutorial:hasCaloricContent pizzatutorial:SohoPizza2 "322"^^xsd:integer)
+
+# Individual: pizzatutorial:SpicyBeefTopping1 (pizzatutorial:SpicyBeefTopping1)
+
+ClassAssertion(pizzatutorial:SpicyBeefTopping pizzatutorial:SpicyBeefTopping1)
+
+# Individual: pizzatutorial:Waiter1 (pizzatutorial:Waiter1)
+
+ClassAssertion(pizzatutorial:Employee pizzatutorial:Waiter1)
+DataPropertyAssertion(pizzatutorial:hasPhone pizzatutorial:Waiter1 "123-234-3434")
+DataPropertyAssertion(pizzatutorial:ssn pizzatutorial:Waiter1 "123456666")
+
+# Individual: pizzatutorial:Waiter2 (pizzatutorial:Waiter2)
+
+ClassAssertion(pizzatutorial:Employee pizzatutorial:Waiter2)
+
+
+DisjointClasses(pizzatutorial:AmericanaPizza pizzatutorial:MargheritaPizza pizzatutorial:SohoPizza)
+DisjointClasses(pizzatutorial:AnchovyTopping pizzatutorial:PrawnTopping pizzatutorial:TunaTopping)
+DisjointClasses(pizzatutorial:CaperTopping pizzatutorial:MushroomTopping pizzatutorial:OliveTopping pizzatutorial:PepperTopping pizzatutorial:TomatoTopping)
+DisjointClasses(pizzatutorial:CheeseTopping pizzatutorial:MeatTopping pizzatutorial:SeafoodTopping pizzatutorial:VegetableTopping)
+DisjointClasses(pizzatutorial:GreenPepperTopping pizzatutorial:JalapenoPepperTopping pizzatutorial:RedPepperTopping)
+DisjointClasses(pizzatutorial:HamTopping pizzatutorial:PepperoniTopping pizzatutorial:SalamiTopping pizzatutorial:SpicyBeefTopping)
+DisjointClasses(pizzatutorial:Pizza pizzatutorial:PizzaBase pizzatutorial:PizzaTopping)
+DLSafeRule(Annotation(swrla:isRuleEnabled "true"^^xsd:boolean) Annotation(rdfs:comment "Descuento para clientes que prefieren pizzas menos picantes") Annotation(rdfs:label "LessSpicyDiscountRule") Body(ClassAtom(pizzatutorial:Customer Variable(pizzatutorial:c)) DataPropertyAtom(pizzatutorial:numberOfPizzasPurchased Variable(pizzatutorial:c) Variable(pizzatutorial:np)) ObjectPropertyAtom(pizzatutorial:hasSpicinessPreference Variable(pizzatutorial:c) Variable(pizzatutorial:spr)) BuiltInAtom(swrlb:greaterThan Variable(pizzatutorial:np) "1"^^xsd:integer) ObjectPropertyAtom(pizzatutorial:isMilderThan Variable(pizzatutorial:spr) pizzatutorial:Hot))Head(DataPropertyAtom(pizzatutorial:hasDiscount Variable(pizzatutorial:c) "0.1"^^xsd:decimal)))
+DLSafeRule(Annotation(swrla:isRuleEnabled "true"^^xsd:boolean) Annotation(rdfs:comment "Descuento especial para clientes que prefieren pizzas picantes") Annotation(rdfs:label "HotDiscountRule") Body(ClassAtom(pizzatutorial:Customer Variable(pizzatutorial:c)) DataPropertyAtom(pizzatutorial:numberOfPizzasPurchased Variable(pizzatutorial:c) Variable(pizzatutorial:np)) ObjectPropertyAtom(pizzatutorial:hasSpicinessPreference Variable(pizzatutorial:c) pizzatutorial:Hot) BuiltInAtom(swrlb:greaterThan Variable(pizzatutorial:np) "1"^^xsd:integer))Head(DataPropertyAtom(pizzatutorial:hasDiscount Variable(pizzatutorial:c) "0.2"^^xsd:decimal)))
+DLSafeRule(Annotation(swrla:isRuleEnabled "true"^^xsd:boolean) Annotation(rdfs:comment "Dice que cliente obtendria el descuento por preferir pizzas picantes") Annotation(rdfs:label "QueryHotDiscount") Body(ClassAtom(pizzatutorial:Customer Variable(pizzatutorial:c)) DataPropertyAtom(pizzatutorial:numberOfPizzasPurchased Variable(pizzatutorial:c) Variable(pizzatutorial:np)) ObjectPropertyAtom(pizzatutorial:hasSpicinessPreference Variable(pizzatutorial:c) pizzatutorial:Hot) BuiltInAtom(swrlb:greaterThan Variable(pizzatutorial:np) "1"^^xsd:integer))Head(BuiltInAtom(<http://sqwrl.stanford.edu/ontologies/built-ins/3.4/sqwrl.owl#select> Variable(pizzatutorial:c) Variable(pizzatutorial:np))))
+)

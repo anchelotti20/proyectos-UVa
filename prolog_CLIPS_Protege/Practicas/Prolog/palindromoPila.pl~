@@ -1,0 +1,26 @@
+mueve(q0,a,[z],q0,[a|z]).
+mueve(q0,b,[z],q0,[b|z]).
+mueve(q0,a,[X|H],q0,[a|[X|H]]).
+mueve(q0,b,[X|H],q0,[b|[X|H]]).
+mueve(q0,e,A,q1,A).
+mueve(q1,a,[a|H],q1,H).
+mueve(q1,b,[b|H],q1,H).
+mueve(q1,[],[z],qf,[z]).
+
+
+
+transita(q1,[],z,qf,[z]):-!.
+
+transita(Qi, [X|Y], Pila, Qf, T):-
+
+    X \=[],
+    mueve(Qi, X, Pila, Q, S),
+    transita(Q, Y, S, Qf, T).
+
+acepta(X,R):-
+
+    transita(q0,X,[z],Q,_),
+    Q = qf,
+    R is 1,
+    !.
+

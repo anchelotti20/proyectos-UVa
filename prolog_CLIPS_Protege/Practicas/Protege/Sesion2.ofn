@@ -1,0 +1,409 @@
+Prefix(:=<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza/>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+
+
+Ontology(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza>
+Annotation(rdfs:comment "Ontology to describe pizza world")
+
+Declaration(Class(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#AmericanaHotPizza>))
+Declaration(Class(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#AmericanaPizza>))
+Declaration(Class(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#AnchovyTopping>))
+Declaration(Class(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#CaperTopping>))
+Declaration(Class(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#CheeseTopping>))
+Declaration(Class(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#CheesyPizza>))
+Declaration(Class(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#DeepPanBase>))
+Declaration(Class(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#GreenPepperTopping>))
+Declaration(Class(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#HamTopping>))
+Declaration(Class(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#HighCaloriePizza>))
+Declaration(Class(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#InterestingPizza>))
+Declaration(Class(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#JalapenoPepperTopping>))
+Declaration(Class(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#LowCaloriePizza>))
+Declaration(Class(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#MargheritaPizza>))
+Declaration(Class(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#MeatTopping>))
+Declaration(Class(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#MozzarellaTopping>))
+Declaration(Class(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#MushroomTopping>))
+Declaration(Class(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#NamedPizza>))
+Declaration(Class(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#OliveTopping>))
+Declaration(Class(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#ParmesanTopping>))
+Declaration(Class(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#PepperTopping>))
+Declaration(Class(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#PepperoniTopping>))
+Declaration(Class(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#Pizza>))
+Declaration(Class(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#PizzaBase>))
+Declaration(Class(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#PizzaTopping>))
+Declaration(Class(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#PrawnTopping>))
+Declaration(Class(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#RedPepperTopping>))
+Declaration(Class(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#SalamiTopping>))
+Declaration(Class(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#SeafoodTopping>))
+Declaration(Class(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#SohoPizza>))
+Declaration(Class(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#Spiciness>))
+Declaration(Class(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#SpicyBeefTopping>))
+Declaration(Class(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#SpicyPizza>))
+Declaration(Class(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#ThinAndCrispyBase>))
+Declaration(Class(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#TomatoTopping>))
+Declaration(Class(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#TunaTopping>))
+Declaration(Class(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#VegetableTopping>))
+Declaration(Class(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#VegetarianPizza>))
+Declaration(ObjectProperty(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#hasBase>))
+Declaration(ObjectProperty(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#hasIngredient>))
+Declaration(ObjectProperty(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#hasSpiciness>))
+Declaration(ObjectProperty(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#hasTopping>))
+Declaration(ObjectProperty(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#isBaseOf>))
+Declaration(ObjectProperty(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#isIngredientOf>))
+Declaration(ObjectProperty(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#isMilderThan>))
+Declaration(ObjectProperty(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#isSpicierThan>))
+Declaration(ObjectProperty(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#isToppingOf>))
+Declaration(DataProperty(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#hasCaloricContent>))
+Declaration(NamedIndividual(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#AmericanaHotPizza1>))
+Declaration(NamedIndividual(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#AmericanaPizza1>))
+Declaration(NamedIndividual(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#CustomPizza1>))
+Declaration(NamedIndividual(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#CustomPizza2>))
+Declaration(NamedIndividual(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#CustomPizza3>))
+Declaration(NamedIndividual(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#CustomPizza4>))
+Declaration(NamedIndividual(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#DeepPanBase1>))
+Declaration(NamedIndividual(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#Hot>))
+Declaration(NamedIndividual(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#MargheritaPizza1>))
+Declaration(NamedIndividual(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#MargheritaPizza2>))
+Declaration(NamedIndividual(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#Medium>))
+Declaration(NamedIndividual(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#Mild>))
+Declaration(NamedIndividual(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#Pizza1>))
+Declaration(NamedIndividual(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#SohoPizza1>))
+Declaration(NamedIndividual(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#SohoPizza2>))
+
+############################
+#   Object Properties
+############################
+
+# Object Property: <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#hasBase> (<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#hasBase>)
+
+SubObjectPropertyOf(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#hasBase> <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#hasIngredient>)
+InverseObjectProperties(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#hasBase> <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#isBaseOf>)
+ObjectPropertyDomain(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#hasBase> <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#Pizza>)
+ObjectPropertyRange(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#hasBase> <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#PizzaBase>)
+
+# Object Property: <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#hasIngredient> (<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#hasIngredient>)
+
+SubObjectPropertyOf(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#hasIngredient> owl:topObjectProperty)
+InverseObjectProperties(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#hasIngredient> <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#isIngredientOf>)
+
+# Object Property: <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#hasSpiciness> (<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#hasSpiciness>)
+
+ObjectPropertyDomain(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#hasSpiciness> <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#PizzaTopping>)
+ObjectPropertyRange(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#hasSpiciness> <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#Spiciness>)
+
+# Object Property: <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#hasTopping> (<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#hasTopping>)
+
+SubObjectPropertyOf(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#hasTopping> <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#hasIngredient>)
+InverseObjectProperties(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#hasTopping> <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#isToppingOf>)
+ObjectPropertyDomain(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#hasTopping> <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#Pizza>)
+ObjectPropertyRange(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#hasTopping> <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#PizzaTopping>)
+
+# Object Property: <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#isBaseOf> (<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#isBaseOf>)
+
+SubObjectPropertyOf(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#isBaseOf> <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#isIngredientOf>)
+
+# Object Property: <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#isIngredientOf> (<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#isIngredientOf>)
+
+SubObjectPropertyOf(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#isIngredientOf> owl:topObjectProperty)
+
+# Object Property: <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#isMilderThan> (<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#isMilderThan>)
+
+InverseObjectProperties(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#isMilderThan> <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#isSpicierThan>)
+
+# Object Property: <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#isSpicierThan> (<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#isSpicierThan>)
+
+SubObjectPropertyOf(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#isSpicierThan> owl:topObjectProperty)
+TransitiveObjectProperty(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#isSpicierThan>)
+ObjectPropertyDomain(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#isSpicierThan> <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#Spiciness>)
+
+# Object Property: <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#isToppingOf> (<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#isToppingOf>)
+
+SubObjectPropertyOf(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#isToppingOf> <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#isIngredientOf>)
+
+
+############################
+#   Data Properties
+############################
+
+# Data Property: <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#hasCaloricContent> (<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#hasCaloricContent>)
+
+SubDataPropertyOf(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#hasCaloricContent> owl:topDataProperty)
+FunctionalDataProperty(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#hasCaloricContent>)
+DataPropertyDomain(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#hasCaloricContent> <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#Pizza>)
+DataPropertyRange(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#hasCaloricContent> xsd:integer)
+
+
+
+############################
+#   Classes
+############################
+
+# Class: <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#AmericanaHotPizza> (<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#AmericanaHotPizza>)
+
+AnnotationAssertion(rdfs:comment <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#AmericanaHotPizza> "Pizza de mozzarella, tomate, peperonni y jalapenios")
+SubClassOf(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#AmericanaHotPizza> <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#NamedPizza>)
+SubClassOf(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#AmericanaHotPizza> ObjectSomeValuesFrom(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#hasTopping> <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#JalapenoPepperTopping>))
+SubClassOf(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#AmericanaHotPizza> ObjectSomeValuesFrom(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#hasTopping> <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#MozzarellaTopping>))
+SubClassOf(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#AmericanaHotPizza> ObjectSomeValuesFrom(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#hasTopping> <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#PepperoniTopping>))
+SubClassOf(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#AmericanaHotPizza> ObjectSomeValuesFrom(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#hasTopping> <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#TomatoTopping>))
+
+# Class: <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#AmericanaPizza> (<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#AmericanaPizza>)
+
+AnnotationAssertion(rdfs:comment <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#AmericanaPizza> "Pizza de mozzarella, tomate y peperonni")
+SubClassOf(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#AmericanaPizza> <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#NamedPizza>)
+SubClassOf(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#AmericanaPizza> ObjectSomeValuesFrom(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#hasTopping> <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#MozzarellaTopping>))
+SubClassOf(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#AmericanaPizza> ObjectSomeValuesFrom(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#hasTopping> <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#PepperoniTopping>))
+SubClassOf(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#AmericanaPizza> ObjectSomeValuesFrom(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#hasTopping> <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#TomatoTopping>))
+
+# Class: <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#AnchovyTopping> (<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#AnchovyTopping>)
+
+SubClassOf(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#AnchovyTopping> <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#SeafoodTopping>)
+
+# Class: <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#CaperTopping> (<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#CaperTopping>)
+
+SubClassOf(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#CaperTopping> <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#VegetableTopping>)
+
+# Class: <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#CheeseTopping> (<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#CheeseTopping>)
+
+SubClassOf(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#CheeseTopping> <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#PizzaTopping>)
+
+# Class: <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#CheesyPizza> (<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#CheesyPizza>)
+
+AnnotationAssertion(rdfs:comment <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#CheesyPizza> "Pizzas con algun ingrediente de queso")
+EquivalentClasses(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#CheesyPizza> ObjectIntersectionOf(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#Pizza> ObjectSomeValuesFrom(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#hasTopping> <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#CheeseTopping>)))
+
+# Class: <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#DeepPanBase> (<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#DeepPanBase>)
+
+SubClassOf(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#DeepPanBase> <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#PizzaBase>)
+DisjointClasses(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#DeepPanBase> <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#ThinAndCrispyBase>)
+
+# Class: <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#GreenPepperTopping> (<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#GreenPepperTopping>)
+
+SubClassOf(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#GreenPepperTopping> <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#PepperTopping>)
+
+# Class: <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#HamTopping> (<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#HamTopping>)
+
+SubClassOf(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#HamTopping> <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#MeatTopping>)
+
+# Class: <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#HighCaloriePizza> (<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#HighCaloriePizza>)
+
+EquivalentClasses(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#HighCaloriePizza> ObjectIntersectionOf(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#Pizza> DataSomeValuesFrom(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#hasCaloricContent> DatatypeRestriction(xsd:integer xsd:minInclusive "400"^^xsd:integer))))
+
+# Class: <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#InterestingPizza> (<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#InterestingPizza>)
+
+AnnotationAssertion(rdfs:comment <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#InterestingPizza> "Pizzas con al menos 3 ingredientes")
+EquivalentClasses(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#InterestingPizza> ObjectIntersectionOf(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#Pizza> ObjectMinCardinality(3 <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#hasTopping> <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#PizzaTopping>)))
+
+# Class: <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#JalapenoPepperTopping> (<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#JalapenoPepperTopping>)
+
+SubClassOf(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#JalapenoPepperTopping> <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#PepperTopping>)
+SubClassOf(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#JalapenoPepperTopping> ObjectHasValue(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#hasSpiciness> <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#Hot>))
+
+# Class: <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#LowCaloriePizza> (<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#LowCaloriePizza>)
+
+EquivalentClasses(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#LowCaloriePizza> ObjectIntersectionOf(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#Pizza> DataSomeValuesFrom(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#hasCaloricContent> DatatypeRestriction(xsd:integer xsd:maxExclusive "400"^^xsd:integer))))
+
+# Class: <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#MargheritaPizza> (<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#MargheritaPizza>)
+
+AnnotationAssertion(rdfs:comment <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#MargheritaPizza> "Pizza de mozzarella y tomate")
+SubClassOf(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#MargheritaPizza> <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#NamedPizza>)
+SubClassOf(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#MargheritaPizza> ObjectSomeValuesFrom(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#hasTopping> <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#MozzarellaTopping>))
+SubClassOf(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#MargheritaPizza> ObjectSomeValuesFrom(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#hasTopping> <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#TomatoTopping>))
+SubClassOf(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#MargheritaPizza> ObjectAllValuesFrom(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#hasTopping> ObjectUnionOf(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#MozzarellaTopping> <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#TomatoTopping>)))
+
+# Class: <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#MeatTopping> (<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#MeatTopping>)
+
+SubClassOf(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#MeatTopping> <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#PizzaTopping>)
+
+# Class: <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#MozzarellaTopping> (<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#MozzarellaTopping>)
+
+SubClassOf(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#MozzarellaTopping> <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#CheeseTopping>)
+DisjointClasses(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#MozzarellaTopping> <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#ParmesanTopping>)
+
+# Class: <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#MushroomTopping> (<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#MushroomTopping>)
+
+SubClassOf(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#MushroomTopping> <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#VegetableTopping>)
+
+# Class: <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#NamedPizza> (<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#NamedPizza>)
+
+SubClassOf(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#NamedPizza> <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#Pizza>)
+
+# Class: <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#OliveTopping> (<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#OliveTopping>)
+
+SubClassOf(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#OliveTopping> <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#VegetableTopping>)
+
+# Class: <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#ParmesanTopping> (<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#ParmesanTopping>)
+
+SubClassOf(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#ParmesanTopping> <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#CheeseTopping>)
+
+# Class: <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#PepperTopping> (<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#PepperTopping>)
+
+SubClassOf(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#PepperTopping> <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#VegetableTopping>)
+
+# Class: <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#PepperoniTopping> (<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#PepperoniTopping>)
+
+SubClassOf(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#PepperoniTopping> <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#MeatTopping>)
+
+# Class: <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#Pizza> (<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#Pizza>)
+
+SubClassOf(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#Pizza> ObjectSomeValuesFrom(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#hasBase> <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#PizzaBase>))
+SubClassOf(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#Pizza> ObjectSomeValuesFrom(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#hasTopping> <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#PizzaTopping>))
+SubClassOf(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#Pizza> DataSomeValuesFrom(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#hasCaloricContent> xsd:integer))
+
+# Class: <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#PizzaBase> (<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#PizzaBase>)
+
+
+# Class: <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#PizzaTopping> (<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#PizzaTopping>)
+
+
+# Class: <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#PrawnTopping> (<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#PrawnTopping>)
+
+SubClassOf(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#PrawnTopping> <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#SeafoodTopping>)
+
+# Class: <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#RedPepperTopping> (<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#RedPepperTopping>)
+
+SubClassOf(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#RedPepperTopping> <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#PepperTopping>)
+
+# Class: <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#SalamiTopping> (<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#SalamiTopping>)
+
+SubClassOf(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#SalamiTopping> <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#MeatTopping>)
+
+# Class: <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#SeafoodTopping> (<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#SeafoodTopping>)
+
+SubClassOf(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#SeafoodTopping> <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#PizzaTopping>)
+
+# Class: <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#SohoPizza> (<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#SohoPizza>)
+
+AnnotationAssertion(rdfs:comment <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#SohoPizza> "Pizza de mozzarella, tomate, aceitunas y parmesano")
+SubClassOf(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#SohoPizza> <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#NamedPizza>)
+SubClassOf(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#SohoPizza> ObjectSomeValuesFrom(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#hasTopping> <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#MozzarellaTopping>))
+SubClassOf(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#SohoPizza> ObjectSomeValuesFrom(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#hasTopping> <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#OliveTopping>))
+SubClassOf(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#SohoPizza> ObjectSomeValuesFrom(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#hasTopping> <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#ParmesanTopping>))
+SubClassOf(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#SohoPizza> ObjectSomeValuesFrom(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#hasTopping> <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#TomatoTopping>))
+SubClassOf(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#SohoPizza> ObjectAllValuesFrom(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#hasTopping> ObjectUnionOf(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#MozzarellaTopping> <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#OliveTopping> <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#ParmesanTopping> <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#TomatoTopping>)))
+
+# Class: <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#Spiciness> (<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#Spiciness>)
+
+AnnotationAssertion(rdfs:comment <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#Spiciness> "Puede ser suave, medio o picante")
+EquivalentClasses(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#Spiciness> ObjectOneOf(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#Hot> <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#Medium> <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#Mild>))
+
+# Class: <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#SpicyBeefTopping> (<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#SpicyBeefTopping>)
+
+SubClassOf(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#SpicyBeefTopping> <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#MeatTopping>)
+
+# Class: <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#SpicyPizza> (<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#SpicyPizza>)
+
+AnnotationAssertion(rdfs:comment <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#SpicyPizza> "Pizzas con ingredientes picantes")
+EquivalentClasses(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#SpicyPizza> ObjectIntersectionOf(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#Pizza> ObjectSomeValuesFrom(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#hasTopping> ObjectHasValue(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#hasSpiciness> <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#Hot>))))
+
+# Class: <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#ThinAndCrispyBase> (<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#ThinAndCrispyBase>)
+
+SubClassOf(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#ThinAndCrispyBase> <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#PizzaBase>)
+
+# Class: <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#TomatoTopping> (<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#TomatoTopping>)
+
+SubClassOf(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#TomatoTopping> <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#VegetableTopping>)
+
+# Class: <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#TunaTopping> (<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#TunaTopping>)
+
+SubClassOf(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#TunaTopping> <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#SeafoodTopping>)
+
+# Class: <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#VegetableTopping> (<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#VegetableTopping>)
+
+SubClassOf(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#VegetableTopping> <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#PizzaTopping>)
+
+# Class: <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#VegetarianPizza> (<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#VegetarianPizza>)
+
+AnnotationAssertion(rdfs:comment <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#VegetarianPizza> "Pizzas con solo ingredientes vegetarianos")
+EquivalentClasses(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#VegetarianPizza> ObjectIntersectionOf(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#Pizza> ObjectAllValuesFrom(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#hasTopping> ObjectUnionOf(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#CheeseTopping> <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#VegetableTopping>))))
+
+
+############################
+#   Named Individuals
+############################
+
+# Individual: <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#AmericanaHotPizza1> (<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#AmericanaHotPizza1>)
+
+ClassAssertion(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#AmericanaHotPizza> <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#AmericanaHotPizza1>)
+DataPropertyAssertion(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#hasCaloricContent> <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#AmericanaHotPizza1> "600"^^xsd:integer)
+
+# Individual: <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#AmericanaPizza1> (<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#AmericanaPizza1>)
+
+ClassAssertion(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#AmericanaPizza> <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#AmericanaPizza1>)
+DataPropertyAssertion(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#hasCaloricContent> <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#AmericanaPizza1> "560"^^xsd:integer)
+
+# Individual: <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#CustomPizza1> (<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#CustomPizza1>)
+
+ClassAssertion(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#Pizza> <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#CustomPizza1>)
+DataPropertyAssertion(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#hasCaloricContent> <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#CustomPizza1> "560"^^xsd:integer)
+
+# Individual: <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#CustomPizza2> (<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#CustomPizza2>)
+
+ClassAssertion(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#Pizza> <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#CustomPizza2>)
+DataPropertyAssertion(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#hasCaloricContent> <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#CustomPizza2> "570"^^xsd:integer)
+
+# Individual: <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#CustomPizza3> (<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#CustomPizza3>)
+
+ClassAssertion(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#Pizza> <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#CustomPizza3>)
+DataPropertyAssertion(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#hasCaloricContent> <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#CustomPizza3> "580"^^xsd:integer)
+
+# Individual: <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#CustomPizza4> (<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#CustomPizza4>)
+
+ClassAssertion(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#Pizza> <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#CustomPizza4>)
+DataPropertyAssertion(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#hasCaloricContent> <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#CustomPizza4> "320"^^xsd:integer)
+
+# Individual: <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#DeepPanBase1> (<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#DeepPanBase1>)
+
+ClassAssertion(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#DeepPanBase> <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#DeepPanBase1>)
+
+# Individual: <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#Hot> (<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#Hot>)
+
+ClassAssertion(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#Spiciness> <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#Hot>)
+ObjectPropertyAssertion(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#isSpicierThan> <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#Hot> <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#Medium>)
+
+# Individual: <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#MargheritaPizza1> (<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#MargheritaPizza1>)
+
+ClassAssertion(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#MargheritaPizza> <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#MargheritaPizza1>)
+DataPropertyAssertion(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#hasCaloricContent> <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#MargheritaPizza1> "345"^^xsd:decimal)
+
+# Individual: <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#MargheritaPizza2> (<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#MargheritaPizza2>)
+
+ClassAssertion(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#MargheritaPizza> <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#MargheritaPizza2>)
+DataPropertyAssertion(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#hasCaloricContent> <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#MargheritaPizza2> "345"^^xsd:decimal)
+
+# Individual: <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#Medium> (<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#Medium>)
+
+ClassAssertion(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#Spiciness> <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#Medium>)
+ObjectPropertyAssertion(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#isSpicierThan> <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#Medium> <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#Mild>)
+
+# Individual: <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#Mild> (<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#Mild>)
+
+ClassAssertion(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#Spiciness> <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#Mild>)
+
+# Individual: <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#Pizza1> (<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#Pizza1>)
+
+ClassAssertion(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#Pizza> <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#Pizza1>)
+ObjectPropertyAssertion(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#hasBase> <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#Pizza1> <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#DeepPanBase1>)
+
+# Individual: <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#SohoPizza1> (<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#SohoPizza1>)
+
+ClassAssertion(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#SohoPizza> <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#SohoPizza1>)
+DataPropertyAssertion(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#hasCaloricContent> <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#SohoPizza1> "350"^^xsd:decimal)
+
+# Individual: <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#SohoPizza2> (<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#SohoPizza2>)
+
+ClassAssertion(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#SohoPizza> <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#SohoPizza2>)
+DataPropertyAssertion(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#hasCaloricContent> <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#SohoPizza2> "355"^^xsd:integer)
+
+
+DisjointClasses(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#AmericanaHotPizza> <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#AmericanaPizza> <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#MargheritaPizza> <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#SohoPizza>)
+DisjointClasses(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#AnchovyTopping> <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#PrawnTopping> <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#TunaTopping>)
+DisjointClasses(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#CaperTopping> <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#MushroomTopping> <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#OliveTopping> <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#PepperTopping> <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#TomatoTopping>)
+DisjointClasses(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#CheeseTopping> <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#MeatTopping> <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#SeafoodTopping> <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#VegetableTopping>)
+DisjointClasses(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#GreenPepperTopping> <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#JalapenoPepperTopping> <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#RedPepperTopping>)
+DisjointClasses(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#HamTopping> <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#PepperoniTopping> <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#SalamiTopping> <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#SpicyBeefTopping>)
+DisjointClasses(<http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#Pizza> <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#PizzaBase> <http://www.semanticweb.org/aacar/ontologies/2025/10/pizza#PizzaTopping>)
+)

@@ -1,0 +1,146 @@
+Prefix(:=<http://www.semanticweb.org/emily/ontologies/2025/10/untitled-ontologyfami/>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+
+
+Ontology(<http://www.semanticweb.org/emily/ontologies/2025/10/familias-practica1>
+Annotation(rdfs:comment "Ontología para la familia de la Práctica 1
+Antolín Caramazana, Angel. Rodrigues Álvarez, Emily Fabiana.")
+
+Declaration(Class(<http://www.semanticweb.org/emily/ontologies/2025/10/familias-practica1#Ascendiente>))
+Declaration(Class(<http://www.semanticweb.org/emily/ontologies/2025/10/familias-practica1#ConPareja>))
+Declaration(Class(<http://www.semanticweb.org/emily/ontologies/2025/10/familias-practica1#Descendiente>))
+Declaration(Class(<http://www.semanticweb.org/emily/ontologies/2025/10/familias-practica1#Persona>))
+Declaration(Class(<http://www.semanticweb.org/emily/ontologies/2025/10/familias-practica1#Progenitor>))
+Declaration(ObjectProperty(<http://www.semanticweb.org/emily/ontologies/2025/10/familias-practica1#esAscendienteDe>))
+Declaration(ObjectProperty(<http://www.semanticweb.org/emily/ontologies/2025/10/familias-practica1#esDescendienteDe>))
+Declaration(ObjectProperty(<http://www.semanticweb.org/emily/ontologies/2025/10/familias-practica1#esHermanoDe>))
+Declaration(ObjectProperty(<http://www.semanticweb.org/emily/ontologies/2025/10/familias-practica1#esParejaDe>))
+Declaration(ObjectProperty(<http://www.semanticweb.org/emily/ontologies/2025/10/familias-practica1#esProgenitorDe>))
+Declaration(NamedIndividual(<http://www.semanticweb.org/emily/ontologies/2025/10/familias-practica1#Eugenia>))
+Declaration(NamedIndividual(<http://www.semanticweb.org/emily/ontologies/2025/10/familias-practica1#Juan>))
+Declaration(NamedIndividual(<http://www.semanticweb.org/emily/ontologies/2025/10/familias-practica1#Lucia>))
+Declaration(NamedIndividual(<http://www.semanticweb.org/emily/ontologies/2025/10/familias-practica1#Luis>))
+Declaration(NamedIndividual(<http://www.semanticweb.org/emily/ontologies/2025/10/familias-practica1#Maria>))
+Declaration(NamedIndividual(<http://www.semanticweb.org/emily/ontologies/2025/10/familias-practica1#Pedro>))
+Declaration(NamedIndividual(<http://www.semanticweb.org/emily/ontologies/2025/10/familias-practica1#Sandra>))
+
+############################
+#   Object Properties
+############################
+
+# Object Property: <http://www.semanticweb.org/emily/ontologies/2025/10/familias-practica1#esAscendienteDe> (<http://www.semanticweb.org/emily/ontologies/2025/10/familias-practica1#esAscendienteDe>)
+
+SubObjectPropertyOf(<http://www.semanticweb.org/emily/ontologies/2025/10/familias-practica1#esAscendienteDe> owl:topObjectProperty)
+InverseObjectProperties(<http://www.semanticweb.org/emily/ontologies/2025/10/familias-practica1#esAscendienteDe> <http://www.semanticweb.org/emily/ontologies/2025/10/familias-practica1#esDescendienteDe>)
+TransitiveObjectProperty(<http://www.semanticweb.org/emily/ontologies/2025/10/familias-practica1#esAscendienteDe>)
+ObjectPropertyDomain(<http://www.semanticweb.org/emily/ontologies/2025/10/familias-practica1#esAscendienteDe> <http://www.semanticweb.org/emily/ontologies/2025/10/familias-practica1#Ascendiente>)
+ObjectPropertyRange(<http://www.semanticweb.org/emily/ontologies/2025/10/familias-practica1#esAscendienteDe> <http://www.semanticweb.org/emily/ontologies/2025/10/familias-practica1#Persona>)
+
+# Object Property: <http://www.semanticweb.org/emily/ontologies/2025/10/familias-practica1#esDescendienteDe> (<http://www.semanticweb.org/emily/ontologies/2025/10/familias-practica1#esDescendienteDe>)
+
+SubObjectPropertyOf(<http://www.semanticweb.org/emily/ontologies/2025/10/familias-practica1#esDescendienteDe> owl:topObjectProperty)
+TransitiveObjectProperty(<http://www.semanticweb.org/emily/ontologies/2025/10/familias-practica1#esDescendienteDe>)
+ObjectPropertyDomain(<http://www.semanticweb.org/emily/ontologies/2025/10/familias-practica1#esDescendienteDe> <http://www.semanticweb.org/emily/ontologies/2025/10/familias-practica1#Descendiente>)
+ObjectPropertyRange(<http://www.semanticweb.org/emily/ontologies/2025/10/familias-practica1#esDescendienteDe> <http://www.semanticweb.org/emily/ontologies/2025/10/familias-practica1#Persona>)
+
+# Object Property: <http://www.semanticweb.org/emily/ontologies/2025/10/familias-practica1#esHermanoDe> (<http://www.semanticweb.org/emily/ontologies/2025/10/familias-practica1#esHermanoDe>)
+
+SubObjectPropertyOf(<http://www.semanticweb.org/emily/ontologies/2025/10/familias-practica1#esHermanoDe> owl:topObjectProperty)
+SymmetricObjectProperty(<http://www.semanticweb.org/emily/ontologies/2025/10/familias-practica1#esHermanoDe>)
+IrreflexiveObjectProperty(<http://www.semanticweb.org/emily/ontologies/2025/10/familias-practica1#esHermanoDe>)
+ObjectPropertyDomain(<http://www.semanticweb.org/emily/ontologies/2025/10/familias-practica1#esHermanoDe> <http://www.semanticweb.org/emily/ontologies/2025/10/familias-practica1#Persona>)
+ObjectPropertyRange(<http://www.semanticweb.org/emily/ontologies/2025/10/familias-practica1#esHermanoDe> <http://www.semanticweb.org/emily/ontologies/2025/10/familias-practica1#Persona>)
+
+# Object Property: <http://www.semanticweb.org/emily/ontologies/2025/10/familias-practica1#esParejaDe> (<http://www.semanticweb.org/emily/ontologies/2025/10/familias-practica1#esParejaDe>)
+
+SubObjectPropertyOf(<http://www.semanticweb.org/emily/ontologies/2025/10/familias-practica1#esParejaDe> owl:topObjectProperty)
+FunctionalObjectProperty(<http://www.semanticweb.org/emily/ontologies/2025/10/familias-practica1#esParejaDe>)
+SymmetricObjectProperty(<http://www.semanticweb.org/emily/ontologies/2025/10/familias-practica1#esParejaDe>)
+IrreflexiveObjectProperty(<http://www.semanticweb.org/emily/ontologies/2025/10/familias-practica1#esParejaDe>)
+ObjectPropertyDomain(<http://www.semanticweb.org/emily/ontologies/2025/10/familias-practica1#esParejaDe> <http://www.semanticweb.org/emily/ontologies/2025/10/familias-practica1#ConPareja>)
+ObjectPropertyDomain(<http://www.semanticweb.org/emily/ontologies/2025/10/familias-practica1#esParejaDe> <http://www.semanticweb.org/emily/ontologies/2025/10/familias-practica1#Persona>)
+
+# Object Property: <http://www.semanticweb.org/emily/ontologies/2025/10/familias-practica1#esProgenitorDe> (<http://www.semanticweb.org/emily/ontologies/2025/10/familias-practica1#esProgenitorDe>)
+
+SubObjectPropertyOf(<http://www.semanticweb.org/emily/ontologies/2025/10/familias-practica1#esProgenitorDe> <http://www.semanticweb.org/emily/ontologies/2025/10/familias-practica1#esAscendienteDe>)
+AsymmetricObjectProperty(<http://www.semanticweb.org/emily/ontologies/2025/10/familias-practica1#esProgenitorDe>)
+IrreflexiveObjectProperty(<http://www.semanticweb.org/emily/ontologies/2025/10/familias-practica1#esProgenitorDe>)
+
+
+
+############################
+#   Classes
+############################
+
+# Class: <http://www.semanticweb.org/emily/ontologies/2025/10/familias-practica1#Ascendiente> (<http://www.semanticweb.org/emily/ontologies/2025/10/familias-practica1#Ascendiente>)
+
+SubClassOf(<http://www.semanticweb.org/emily/ontologies/2025/10/familias-practica1#Ascendiente> <http://www.semanticweb.org/emily/ontologies/2025/10/familias-practica1#Persona>)
+SubClassOf(<http://www.semanticweb.org/emily/ontologies/2025/10/familias-practica1#Ascendiente> ObjectSomeValuesFrom(<http://www.semanticweb.org/emily/ontologies/2025/10/familias-practica1#esAscendienteDe> <http://www.semanticweb.org/emily/ontologies/2025/10/familias-practica1#Persona>))
+
+# Class: <http://www.semanticweb.org/emily/ontologies/2025/10/familias-practica1#ConPareja> (<http://www.semanticweb.org/emily/ontologies/2025/10/familias-practica1#ConPareja>)
+
+SubClassOf(<http://www.semanticweb.org/emily/ontologies/2025/10/familias-practica1#ConPareja> <http://www.semanticweb.org/emily/ontologies/2025/10/familias-practica1#Persona>)
+SubClassOf(<http://www.semanticweb.org/emily/ontologies/2025/10/familias-practica1#ConPareja> ObjectSomeValuesFrom(<http://www.semanticweb.org/emily/ontologies/2025/10/familias-practica1#esParejaDe> <http://www.semanticweb.org/emily/ontologies/2025/10/familias-practica1#Persona>))
+
+# Class: <http://www.semanticweb.org/emily/ontologies/2025/10/familias-practica1#Descendiente> (<http://www.semanticweb.org/emily/ontologies/2025/10/familias-practica1#Descendiente>)
+
+SubClassOf(<http://www.semanticweb.org/emily/ontologies/2025/10/familias-practica1#Descendiente> <http://www.semanticweb.org/emily/ontologies/2025/10/familias-practica1#Persona>)
+SubClassOf(<http://www.semanticweb.org/emily/ontologies/2025/10/familias-practica1#Descendiente> ObjectSomeValuesFrom(<http://www.semanticweb.org/emily/ontologies/2025/10/familias-practica1#esDescendienteDe> <http://www.semanticweb.org/emily/ontologies/2025/10/familias-practica1#Persona>))
+
+# Class: <http://www.semanticweb.org/emily/ontologies/2025/10/familias-practica1#Progenitor> (<http://www.semanticweb.org/emily/ontologies/2025/10/familias-practica1#Progenitor>)
+
+SubClassOf(<http://www.semanticweb.org/emily/ontologies/2025/10/familias-practica1#Progenitor> <http://www.semanticweb.org/emily/ontologies/2025/10/familias-practica1#Ascendiente>)
+SubClassOf(<http://www.semanticweb.org/emily/ontologies/2025/10/familias-practica1#Progenitor> ObjectSomeValuesFrom(<http://www.semanticweb.org/emily/ontologies/2025/10/familias-practica1#esProgenitorDe> <http://www.semanticweb.org/emily/ontologies/2025/10/familias-practica1#Progenitor>))
+
+
+############################
+#   Named Individuals
+############################
+
+# Individual: <http://www.semanticweb.org/emily/ontologies/2025/10/familias-practica1#Eugenia> (<http://www.semanticweb.org/emily/ontologies/2025/10/familias-practica1#Eugenia>)
+
+ClassAssertion(<http://www.semanticweb.org/emily/ontologies/2025/10/familias-practica1#Persona> <http://www.semanticweb.org/emily/ontologies/2025/10/familias-practica1#Eugenia>)
+ObjectPropertyAssertion(<http://www.semanticweb.org/emily/ontologies/2025/10/familias-practica1#esParejaDe> <http://www.semanticweb.org/emily/ontologies/2025/10/familias-practica1#Eugenia> <http://www.semanticweb.org/emily/ontologies/2025/10/familias-practica1#Pedro>)
+ObjectPropertyAssertion(<http://www.semanticweb.org/emily/ontologies/2025/10/familias-practica1#esProgenitorDe> <http://www.semanticweb.org/emily/ontologies/2025/10/familias-practica1#Eugenia> <http://www.semanticweb.org/emily/ontologies/2025/10/familias-practica1#Lucia>)
+
+# Individual: <http://www.semanticweb.org/emily/ontologies/2025/10/familias-practica1#Juan> (<http://www.semanticweb.org/emily/ontologies/2025/10/familias-practica1#Juan>)
+
+ClassAssertion(<http://www.semanticweb.org/emily/ontologies/2025/10/familias-practica1#Persona> <http://www.semanticweb.org/emily/ontologies/2025/10/familias-practica1#Juan>)
+ObjectPropertyAssertion(<http://www.semanticweb.org/emily/ontologies/2025/10/familias-practica1#esParejaDe> <http://www.semanticweb.org/emily/ontologies/2025/10/familias-practica1#Juan> <http://www.semanticweb.org/emily/ontologies/2025/10/familias-practica1#Lucia>)
+ObjectPropertyAssertion(<http://www.semanticweb.org/emily/ontologies/2025/10/familias-practica1#esProgenitorDe> <http://www.semanticweb.org/emily/ontologies/2025/10/familias-practica1#Juan> <http://www.semanticweb.org/emily/ontologies/2025/10/familias-practica1#Luis>)
+ObjectPropertyAssertion(<http://www.semanticweb.org/emily/ontologies/2025/10/familias-practica1#esProgenitorDe> <http://www.semanticweb.org/emily/ontologies/2025/10/familias-practica1#Juan> <http://www.semanticweb.org/emily/ontologies/2025/10/familias-practica1#Maria>)
+ObjectPropertyAssertion(<http://www.semanticweb.org/emily/ontologies/2025/10/familias-practica1#esProgenitorDe> <http://www.semanticweb.org/emily/ontologies/2025/10/familias-practica1#Juan> <http://www.semanticweb.org/emily/ontologies/2025/10/familias-practica1#Sandra>)
+
+# Individual: <http://www.semanticweb.org/emily/ontologies/2025/10/familias-practica1#Lucia> (<http://www.semanticweb.org/emily/ontologies/2025/10/familias-practica1#Lucia>)
+
+ClassAssertion(<http://www.semanticweb.org/emily/ontologies/2025/10/familias-practica1#Persona> <http://www.semanticweb.org/emily/ontologies/2025/10/familias-practica1#Lucia>)
+ObjectPropertyAssertion(<http://www.semanticweb.org/emily/ontologies/2025/10/familias-practica1#esProgenitorDe> <http://www.semanticweb.org/emily/ontologies/2025/10/familias-practica1#Lucia> <http://www.semanticweb.org/emily/ontologies/2025/10/familias-practica1#Luis>)
+ObjectPropertyAssertion(<http://www.semanticweb.org/emily/ontologies/2025/10/familias-practica1#esProgenitorDe> <http://www.semanticweb.org/emily/ontologies/2025/10/familias-practica1#Lucia> <http://www.semanticweb.org/emily/ontologies/2025/10/familias-practica1#Maria>)
+ObjectPropertyAssertion(<http://www.semanticweb.org/emily/ontologies/2025/10/familias-practica1#esProgenitorDe> <http://www.semanticweb.org/emily/ontologies/2025/10/familias-practica1#Lucia> <http://www.semanticweb.org/emily/ontologies/2025/10/familias-practica1#Sandra>)
+
+# Individual: <http://www.semanticweb.org/emily/ontologies/2025/10/familias-practica1#Luis> (<http://www.semanticweb.org/emily/ontologies/2025/10/familias-practica1#Luis>)
+
+ClassAssertion(<http://www.semanticweb.org/emily/ontologies/2025/10/familias-practica1#Persona> <http://www.semanticweb.org/emily/ontologies/2025/10/familias-practica1#Luis>)
+ObjectPropertyAssertion(<http://www.semanticweb.org/emily/ontologies/2025/10/familias-practica1#esHermanoDe> <http://www.semanticweb.org/emily/ontologies/2025/10/familias-practica1#Luis> <http://www.semanticweb.org/emily/ontologies/2025/10/familias-practica1#Sandra>)
+
+# Individual: <http://www.semanticweb.org/emily/ontologies/2025/10/familias-practica1#Maria> (<http://www.semanticweb.org/emily/ontologies/2025/10/familias-practica1#Maria>)
+
+ClassAssertion(<http://www.semanticweb.org/emily/ontologies/2025/10/familias-practica1#Persona> <http://www.semanticweb.org/emily/ontologies/2025/10/familias-practica1#Maria>)
+ObjectPropertyAssertion(<http://www.semanticweb.org/emily/ontologies/2025/10/familias-practica1#esHermanoDe> <http://www.semanticweb.org/emily/ontologies/2025/10/familias-practica1#Maria> <http://www.semanticweb.org/emily/ontologies/2025/10/familias-practica1#Luis>)
+ObjectPropertyAssertion(<http://www.semanticweb.org/emily/ontologies/2025/10/familias-practica1#esHermanoDe> <http://www.semanticweb.org/emily/ontologies/2025/10/familias-practica1#Maria> <http://www.semanticweb.org/emily/ontologies/2025/10/familias-practica1#Sandra>)
+
+# Individual: <http://www.semanticweb.org/emily/ontologies/2025/10/familias-practica1#Pedro> (<http://www.semanticweb.org/emily/ontologies/2025/10/familias-practica1#Pedro>)
+
+ClassAssertion(<http://www.semanticweb.org/emily/ontologies/2025/10/familias-practica1#Persona> <http://www.semanticweb.org/emily/ontologies/2025/10/familias-practica1#Pedro>)
+ObjectPropertyAssertion(<http://www.semanticweb.org/emily/ontologies/2025/10/familias-practica1#esProgenitorDe> <http://www.semanticweb.org/emily/ontologies/2025/10/familias-practica1#Pedro> <http://www.semanticweb.org/emily/ontologies/2025/10/familias-practica1#Lucia>)
+
+# Individual: <http://www.semanticweb.org/emily/ontologies/2025/10/familias-practica1#Sandra> (<http://www.semanticweb.org/emily/ontologies/2025/10/familias-practica1#Sandra>)
+
+ClassAssertion(<http://www.semanticweb.org/emily/ontologies/2025/10/familias-practica1#Persona> <http://www.semanticweb.org/emily/ontologies/2025/10/familias-practica1#Sandra>)
+
+
+)

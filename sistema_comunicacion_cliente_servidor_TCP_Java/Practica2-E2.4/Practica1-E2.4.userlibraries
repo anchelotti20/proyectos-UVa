@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eclipse-userlibraries>
+  <library name="gson-2.12.1">
+    <archive path="C:/Users/marku/Downloads/Practica1-E2.4/Practica1-E2.4/Practica1-E2.4/.idea/libraries/gson-2.12.1.jar" />
+  </library>
+  <library name="gson-2.12.2">
+    <archive path="C:/Users/marku/Downloads/Practica1-E2.4/Practica1-E2.4/Practica1-E2.4/lib/gson-2.12.1.jar" />
+  </library>
+  <library name="gson-2.12.3">
+    <archive path="C:/Users/marku/Downloads/Practica1-E2.4/Practica1-E2.4/out/production/Practica1-E2.4/.idea/libraries/gson-2.12.1.jar" />
+  </library>
+  <library name="gson-2.12.4">
+    <archive path="C:/Users/marku/Downloads/Practica1-E2.4/Practica1-E2.4/out/production/Practica1-E2.4/lib/gson-2.12.1.jar" />
+  </library>
+</eclipse-userlibraries>
+

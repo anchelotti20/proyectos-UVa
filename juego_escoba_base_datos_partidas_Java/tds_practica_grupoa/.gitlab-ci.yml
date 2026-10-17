@@ -1,0 +1,89 @@
+#Archivo integracion continua
+#Autores Angel Antolin Caramazana y Marcos Gomez Medina
+
+#Imagen de maven
+image: maven:3.9-eclipse-temurin-17
+
+#Variables globales para optimizar
+variables:
+  MAVEN_OPTS: -Dmaven.repo.local=.m2/repository
+  POM_PATH: practica_grupoa/pom.xml
+  SONAR_USER_HOME: "${CI_PROJECT_DIR}/.sonar"  
+  
+
+#Paths
+cache:
+    paths:
+      - .m2/repository
+      - target
+
+
+#Lista de pasos
+stages:          
+  - build
+  - test
+  - build-sonar
+  - deploy
+
+#1. BUILD: compilacion del proyecto
+# Ejecutar al hacer merge a la rama develop
+build-job:       
+  stage: build
+  script:
+    - echo "Compilando codigo"
+    - "mvn -f $POM_PATH compile"
+    - echo "Compilacion completada"
+  rules:
+    - if: $CI_PIPELINE_SOURCE == 'merge_request_event'
+    - if: $CI_COMMIT_BRANCH == "develop"
+
+#2. TEST: ejecuta los test
+# Ejecuta los test en aislamiento
+# Al hacer merge en la rama develop
+test-aislamiento-job:   
+  stage: test    
+  script:
+    - echo "Ejecutando test en aislamiento"
+    - "mvn -f $POM_PATH test -e -Dtest=*EnAislamientoTest"
+  rules:
+      - if: $CI_PIPELINE_SOURCE == 'merge_request_event'
+      - if: $CI_COMMIT_BRANCH == "develop"
+
+# Ejecuta los test que no estan en aislamiento
+# Cuando se mergea a develop o main
+test-job:   
+  stage: test    
+  script:
+    - echo "Ejecutando test sin aislamiento"
+    - "mvn -f $POM_PATH test -e -Dtest!=*EnAislamientoTest"
+  rules:
+    - if: $CI_PIPELINE_SOURCE == 'merge_request_event'
+    - if: ($CI_COMMIT_BRANCH == "develop" || $CI_COMMIT_BRANCH == "main")
+
+#3. BUILD-SONAR: ejecuta el script de sonarqube
+# Cuando se hace el merge a main
+build-sonar:
+  stage: build-sonar
+  cache:
+    policy: pull-push
+    key: "sonar-cache-$CI_COMMIT_REF_SLUG"
+    paths:
+      - "${SONAR_USER_HOME}/cache"
+      - sonar-scanner/
+      
+  script: 
+    - mvn -f $POM_PATH clean jacoco:prepare-agent test install jacoco:report org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.qualitygate.wait=true
+  rules:
+    # CASO 1: Ejecutar en Merge Requests SOLO si van dirigidos a 'main'
+    - if: $CI_PIPELINE_SOURCE == 'merge_request_event' && $CI_MERGE_REQUEST_TARGET_BRANCH_NAME == "main"
+    # CASO 2: Ejecutar cuando ya se ha fusionado en 'main' (para tener el registro final)
+    - if: ($CI_COMMIT_BRANCH == "main")
+
+#4. DEPLOY: despliegue de la aplicacion
+# Al hacer merge a la rama main
+deploy-job:      
+  stage: deploy  
+  script:
+    - echo "Desplegando la aplicacion."
+  rules:
+    - if: ($CI_COMMIT_BRANCH == "main") 

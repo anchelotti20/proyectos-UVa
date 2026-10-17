@@ -1,0 +1,300 @@
+Prefix(:=<http://example.com/owl/families/>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+Prefix(otherOnt:=<http://example.org/otherOntologies/families/>)
+
+
+Ontology(<http://example.com/owl/families>
+Annotation(rdfs:comment "Se trata del ejemplo  example.com/owl/families/.
+
+No está pubñicada como tal, pero se ofrece como ejemplo en \"The Complete Sample Ontology\" proporcionado en https://www.w3.org/TR/2012/REC-owl2-primer-20121211
+
+Expecíficamente en 
+
+https://www.w3.org/TR/2012/REC-owl2-primer-20121211/#Appendix:_The_Complete_Sample_Ontology
+
+La unica diferencia con la original es la eliminación de:
+  Import( <http://example.org/otherOntologies/families.owl> )
+
+porque a fecha de diciembre de 2025 no está disponible.
+
+Carlos Alonso")
+
+Declaration(Class(:Adult))
+Declaration(Class(:ChildlessPerson))
+Declaration(Class(:Dead))
+Declaration(Class(:Father))
+Declaration(Class(:Female))
+Declaration(Class(:Grandfather))
+Declaration(Class(:HappyPerson))
+Declaration(Class(:Human))
+Declaration(Class(:JohnsChildren))
+Declaration(Class(:Man))
+Declaration(Class(:Mother))
+Declaration(Class(:MyBirthdayGuests))
+Declaration(Class(:NarcisticPerson))
+Declaration(Class(:Orphan))
+Declaration(Class(:Parent))
+Declaration(Class(:Person))
+Declaration(Class(:SocialRole))
+Declaration(Class(:Teenager))
+Declaration(Class(:Woman))
+Declaration(Class(:YoungChild))
+Declaration(Class(otherOnt:Grownup))
+Declaration(ObjectProperty(:hasAncestor))
+Declaration(ObjectProperty(:hasBrother))
+Declaration(ObjectProperty(:hasChild))
+Declaration(ObjectProperty(:hasDaughter))
+Declaration(ObjectProperty(:hasFather))
+Declaration(ObjectProperty(:hasGrandparent))
+Declaration(ObjectProperty(:hasHusband))
+Declaration(ObjectProperty(:hasParent))
+Declaration(ObjectProperty(:hasRelative))
+Declaration(ObjectProperty(:hasSon))
+Declaration(ObjectProperty(:hasSpouse))
+Declaration(ObjectProperty(:hasUncle))
+Declaration(ObjectProperty(:hasWife))
+Declaration(ObjectProperty(:loves))
+Declaration(ObjectProperty(:parentOf))
+Declaration(ObjectProperty(otherOnt:child))
+Declaration(DataProperty(:hasAge))
+Declaration(DataProperty(:hasSSN))
+Declaration(DataProperty(otherOnt:age))
+Declaration(NamedIndividual(<http://example.com/owl/families#Ana>))
+Declaration(NamedIndividual(<http://example.com/owl/families#Julia>))
+Declaration(NamedIndividual(<http://example.com/owl/families#Marta>))
+Declaration(NamedIndividual(:Bill))
+Declaration(NamedIndividual(:Father))
+Declaration(NamedIndividual(:Jack))
+Declaration(NamedIndividual(:James))
+Declaration(NamedIndividual(:Jim))
+Declaration(NamedIndividual(:John))
+Declaration(NamedIndividual(:Mary))
+Declaration(NamedIndividual(:Meg))
+Declaration(NamedIndividual(:Susan))
+Declaration(NamedIndividual(otherOnt:JohnBrown))
+Declaration(NamedIndividual(otherOnt:MaryBrown))
+Declaration(Datatype(:majorAge))
+Declaration(Datatype(:minorAge))
+Declaration(Datatype(:personAge))
+Declaration(Datatype(:toddlerAge))
+
+############################
+#   Object Properties
+############################
+
+# Object Property: :hasAncestor (:hasAncestor)
+
+TransitiveObjectProperty(:hasAncestor)
+
+# Object Property: :hasChild (:hasChild)
+
+EquivalentObjectProperties(:hasChild otherOnt:child)
+InverseObjectProperties(:hasChild :hasParent)
+AsymmetricObjectProperty(:hasChild)
+
+# Object Property: :hasDaughter (:hasDaughter)
+
+DisjointObjectProperties(:hasDaughter :hasSon)
+
+# Object Property: :hasFather (:hasFather)
+
+SubObjectPropertyOf(:hasFather :hasParent)
+
+# Object Property: :hasHusband (:hasHusband)
+
+FunctionalObjectProperty(:hasHusband)
+InverseFunctionalObjectProperty(:hasHusband)
+
+# Object Property: :hasParent (:hasParent)
+
+SubObjectPropertyOf(:hasParent :hasAncestor)
+DisjointObjectProperties(:hasParent :hasSpouse)
+
+# Object Property: :hasRelative (:hasRelative)
+
+ReflexiveObjectProperty(:hasRelative)
+
+# Object Property: :hasSpouse (:hasSpouse)
+
+SymmetricObjectProperty(:hasSpouse)
+
+# Object Property: :hasWife (:hasWife)
+
+SubObjectPropertyOf(:hasWife :hasSpouse)
+ObjectPropertyDomain(:hasWife :Man)
+ObjectPropertyRange(:hasWife :Woman)
+
+# Object Property: :parentOf (:parentOf)
+
+IrreflexiveObjectProperty(:parentOf)
+
+
+############################
+#   Data Properties
+############################
+
+# Data Property: :hasAge (:hasAge)
+
+EquivalentDataProperties(:hasAge otherOnt:age)
+FunctionalDataProperty(:hasAge)
+DataPropertyDomain(:hasAge :Person)
+DataPropertyRange(:hasAge xsd:nonNegativeInteger)
+
+
+############################
+#   Datatypes
+############################
+
+# Datatype: :majorAge (:majorAge)
+
+DatatypeDefinition(:majorAge DataIntersectionOf(:personAge DataComplementOf(:minorAge)))
+
+# Datatype: :minorAge (:minorAge)
+
+DatatypeDefinition(:minorAge DatatypeRestriction(xsd:integer xsd:minInclusive "0"^^xsd:integer xsd:maxInclusive "18"^^xsd:integer))
+
+# Datatype: :personAge (:personAge)
+
+DatatypeDefinition(:personAge DatatypeRestriction(xsd:integer xsd:minInclusive "0"^^xsd:integer xsd:maxInclusive "150"^^xsd:integer))
+
+# Datatype: :toddlerAge (:toddlerAge)
+
+DatatypeDefinition(:toddlerAge DataOneOf("1"^^xsd:integer "2"^^xsd:integer))
+
+
+############################
+#   Classes
+############################
+
+# Class: :Adult (:Adult)
+
+EquivalentClasses(:Adult otherOnt:Grownup)
+
+# Class: :ChildlessPerson (:ChildlessPerson)
+
+EquivalentClasses(:ChildlessPerson ObjectIntersectionOf(:Person ObjectComplementOf(:Parent)))
+SubClassOf(:ChildlessPerson ObjectIntersectionOf(:Person ObjectComplementOf(ObjectSomeValuesFrom(ObjectInverseOf(:hasParent) owl:Thing))))
+
+# Class: :Father (:Father)
+
+SubClassOf(:Father ObjectIntersectionOf(:Man :Parent))
+
+# Class: :Grandfather (:Grandfather)
+
+SubClassOf(:Grandfather ObjectIntersectionOf(:Man :Parent))
+
+# Class: :HappyPerson (:HappyPerson)
+
+EquivalentClasses(:HappyPerson ObjectIntersectionOf(ObjectSomeValuesFrom(:hasChild :HappyPerson) ObjectAllValuesFrom(:hasChild :HappyPerson)))
+
+# Class: :Human (:Human)
+
+EquivalentClasses(:Human :Person)
+
+# Class: :JohnsChildren (:JohnsChildren)
+
+EquivalentClasses(:JohnsChildren ObjectHasValue(:hasParent :John))
+
+# Class: :Man (:Man)
+
+SubClassOf(Annotation(rdfs:comment "States that every man is a person.") :Man :Person)
+DisjointClasses(:Man :Woman)
+
+# Class: :Mother (:Mother)
+
+EquivalentClasses(:Mother ObjectIntersectionOf(:Parent :Woman))
+SubClassOf(:Mother :Woman)
+
+# Class: :MyBirthdayGuests (:MyBirthdayGuests)
+
+EquivalentClasses(:MyBirthdayGuests ObjectOneOf(:Bill :John :Mary))
+
+# Class: :NarcisticPerson (:NarcisticPerson)
+
+EquivalentClasses(:NarcisticPerson ObjectHasSelf(:loves))
+
+# Class: :Orphan (:Orphan)
+
+EquivalentClasses(:Orphan ObjectAllValuesFrom(ObjectInverseOf(:hasChild) :Dead))
+
+# Class: :Parent (:Parent)
+
+EquivalentClasses(:Parent ObjectUnionOf(:Father :Mother))
+EquivalentClasses(:Parent ObjectSomeValuesFrom(:hasChild :Person))
+
+# Class: :Person (:Person)
+
+AnnotationAssertion(rdfs:comment :Person "Represents the set of all people.")
+
+# Class: :Teenager (:Teenager)
+
+SubClassOf(:Teenager DataSomeValuesFrom(:hasAge DatatypeRestriction(xsd:integer xsd:minExclusive "12"^^xsd:integer xsd:maxInclusive "19"^^xsd:integer)))
+
+# Class: :Woman (:Woman)
+
+SubClassOf(:Woman :Person)
+
+# Class: :YoungChild (:YoungChild)
+
+
+
+############################
+#   Named Individuals
+############################
+
+# Individual: <http://example.com/owl/families#Ana> (<http://example.com/owl/families#Ana>)
+
+ObjectPropertyAssertion(:hasParent <http://example.com/owl/families#Ana> <http://example.com/owl/families#Julia>)
+
+# Individual: <http://example.com/owl/families#Julia> (<http://example.com/owl/families#Julia>)
+
+ObjectPropertyAssertion(:hasParent <http://example.com/owl/families#Julia> <http://example.com/owl/families#Marta>)
+
+# Individual: :Bill (:Bill)
+
+NegativeObjectPropertyAssertion(:hasDaughter :Bill :Susan)
+NegativeObjectPropertyAssertion(:hasWife :Bill :Mary)
+
+# Individual: :Father (:Father)
+
+ClassAssertion(:SocialRole :Father)
+
+# Individual: :Jack (:Jack)
+
+ClassAssertion(ObjectIntersectionOf(:Person ObjectComplementOf(:Parent)) :Jack)
+NegativeDataPropertyAssertion(:hasAge :Jack "53"^^xsd:integer)
+
+# Individual: :James (:James)
+
+SameIndividual(:James :Jim)
+
+# Individual: :John (:John)
+
+ClassAssertion(:Father :John)
+ClassAssertion(ObjectMinCardinality(2 :hasChild :Parent) :John)
+ClassAssertion(ObjectExactCardinality(3 :hasChild :Parent) :John)
+ClassAssertion(ObjectExactCardinality(5 :hasChild) :John)
+ClassAssertion(ObjectMaxCardinality(4 :hasChild :Parent) :John)
+SameIndividual(:John otherOnt:JohnBrown)
+ObjectPropertyAssertion(:hasParent :John <http://example.com/owl/families#Ana>)
+ObjectPropertyAssertion(:hasWife :John :Mary)
+DataPropertyAssertion(:hasAge :John "51"^^xsd:integer)
+
+# Individual: :Mary (:Mary)
+
+ClassAssertion(:Person :Mary)
+ClassAssertion(:Woman :Mary)
+SameIndividual(:Mary otherOnt:MaryBrown)
+
+
+SubClassOf(ObjectIntersectionOf(:Female ObjectOneOf(:Bill :Mary :Meg)) ObjectIntersectionOf(:Parent ObjectAllValuesFrom(:hasChild :Female) ObjectMaxCardinality(1 :hasChild)))
+DisjointClasses(:Father :Mother :YoungChild)
+DifferentIndividuals(:Bill :John)
+SubObjectPropertyOf(ObjectPropertyChain(:hasFather :hasBrother) :hasUncle)
+SubObjectPropertyOf(ObjectPropertyChain(:hasParent :hasParent) :hasGrandparent)
+HasKey(:Person () (:hasSSN))
+)

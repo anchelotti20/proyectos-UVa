@@ -1,0 +1,143 @@
+/* Proyecto Realizado por el grupo 12 */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #e0e0e0; /* Gris de fondo de página */
+}
+
+/* Header */
+header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 30px;
+    border-bottom: 3px solid black;
+    box-sizing: border-box;
+    background: white;
+    position: relative;
+    height: 85px;
+}
+
+.logo { height: 50px; z-index: 10; }
+
+h1 {
+    position: absolute;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 26px;
+    margin: 0;
+    pointer-events: none;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.selector-jornada select {
+    border: 3px solid black;
+    padding: 8px 12px;
+    font-weight: bold;
+    background: white;
+}
+
+/* Contenedor */
+.contenedor {
+    display: flex;
+    justify-content: center;
+    padding: 50px 0;
+    width: 100%;
+    min-height: 70vh;
+}
+
+/* TABLA: Con bordes dibujados y colores */
+.tabla-fantasy {
+    width: 80%;
+    max-width: 950px;
+    border-collapse: collapse;
+    background: white;
+    border: 3px solid black;
+}
+
+/* Cabecera de la tabla centrada y gris oscuro */
+.tabla-fantasy thead {
+    background-color: #333;
+    color: white;
+    border-bottom: 3px solid black;
+}
+
+.tabla-fantasy th {
+    padding: 15px;
+    text-transform: uppercase;
+    font-weight: bold;
+    border: 3px solid black;
+    text-align: center; /* Títulos al centro */
+}
+
+/* Celdas */
+td {
+    padding: 15px;
+    font-size: 19px;
+    font-weight: bold;
+    border: 3px solid black;
+    text-align: center; /* Contenido al centro */
+}
+
+/* Estilo para la columna de POSICIÓN (Rojo) */
+.pos {
+    width: 10%;
+    background-color: #cc0000; /* Rojo deportivo */
+    color: white;
+    font-size: 22px;
+}
+
+/* Estilo para la columna de NOMBRE */
+.nombre {
+    width: 70%;
+    text-transform: uppercase;
+    background-color: white;
+}
+
+.nombre a {
+    color: black;
+    text-decoration: none;
+}
+
+/* Estilo para la columna de PUNTOS (Gris muy claro) */
+.puntos {
+    width: 20%;
+    background-color: #f9f9f9;
+}
+
+/* Filas alternas para mejor lectura */
+tr:nth-child(even) .nombre {
+    background-color: #f2f2f2;
+}
+
+/* Footer */
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    background: white;
+    border-top: 3px solid black;
+    height: 70px;
+}
+
+.nav-btn {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    border-right: 3px solid black;
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+}
+
+.nav-btn:last-child { border-right: none; }
+
+.active { background-color: #d0d0d0; }

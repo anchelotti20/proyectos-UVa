@@ -1,0 +1,76 @@
+mueve(q0, a, [z], q0, [h,z]).
+mueve(q0, b, [z], q0, [h,z]).
+mueve(q0, a, [h|H], q0, [h|[h|H]]).
+mueve(q0, b, [h|H], q0, [h|[h|H]]).
+mueve(q0, c, [h|H], q0, H).
+mueve(q0, c, [z], q0, [c,z]).
+mueve(q0, c, [c|H], q0, [c|[c|H]]).
+mueve(q0, a, [c|H], q0, H).
+mueve(q0, b, [c|H], q0, H).
+
+
+
+mueve(q0,[],[z],qf,[z]).
+
+transita(q0,[],[z], qf,[z]):-!.
+
+
+transita(Qi, [X|Y], R, Qf, T):-         
+
+    X \= [],
+    mueve(Qi, X, R, P, S),
+    transita(P, Y, S, Qf, T).
+
+
+/**
+transita(Qi, [X|Y], R, Qf, T):-  
+
+    transita(P, Y, S, Qf, T),
+    mueve(Qi, X, R, P, S),
+    X \= [].
+*/
+
+
+acepta(X, R):-
+    transita(q0, X, [z], Q, _),
+    Q = qf,
+    R is 1,
+    !.
+
+/**
+acepta(X,R):-
+    !,
+    R is 1,
+    Q = qf,
+    transita(q0, X, [z], Q, _).
+*/
+
+
+solve(true):- !.
+solve((A,B)):- solve(B), solve(A).  /*Para que recuelva de derecha a izquierda,
+                                     * se invierte esta linea*/
+solve(A):- predicate_property(A,built_in), !, call(A).
+solve(A):- clause(A,B), solve(B).
+
+
+
+solve_traza(A):- solve_traza_aux(A,0).
+
+
+solve_traza_aux(true,_):-!.
+
+solve_traza_aux((A, B),N) :-!, solve_traza_aux(A,N), solve_traza_aux(B,N).
+
+solve_traza_aux(A,_):- predicate_property(A,built_in),!,call(A).
+
+
+solve_traza_aux(A,N):-
+    N1 is N + 1,
+    clause(A,B),
+    solve_traza_aux(B,N1),
+    Tabular is 3 * N1,
+    tab(Tabular),
+    write(N1),
+    tab(1),
+    write(A),
+    nl.

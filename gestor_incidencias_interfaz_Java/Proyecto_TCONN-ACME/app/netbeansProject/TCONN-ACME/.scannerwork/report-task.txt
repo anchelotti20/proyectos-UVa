@@ -1,0 +1,6 @@
+projectKey=es.uva.inf.ds25-26-05
+serverUrl=https://sonarqube.inf.uva.es
+serverVersion=25.9.0.112764
+dashboardUrl=https://sonarqube.inf.uva.es/dashboard?id=es.uva.inf.ds25-26-05
+ceTaskId=f2bde827-6f6c-45e4-9b9e-df3ab1bb20d1
+ceTaskUrl=https://sonarqube.inf.uva.es/api/ce/task?id=f2bde827-6f6c-45e4-9b9e-df3ab1bb20d1

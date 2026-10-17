@@ -1,0 +1,172 @@
+Prefix(:=<http://www.semanticweb.org/calonso/ontologies/2025/12/AsistenteDiagnosticoSimple_2025-26/>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+
+
+Ontology(<http://www.semanticweb.org/calonso/ontologies/2025/12/AsistenteDiagnosticoSimple_2025-26>
+Annotation(rdfs:comment "Assitente al diagnóstico simple.
+
+Simple:
+- solo una bombilla.
+- sin conmutador.
+- sin modelar el funcionamiento general de un interruptor.
+
+Versión incompleta para el trabajo de los alumnos.
+
+Dpto. Informática.
+EII de Valladolid, UVa.
+Diciembre de 2025.")
+
+Declaration(Class(<http://www.semanticweb.org/calonso/ontologies/2025/12/AsistenteDiagnosticoSimple_2025-26#Bombilla>))
+Declaration(Class(<http://www.semanticweb.org/calonso/ontologies/2025/12/AsistenteDiagnosticoSimple_2025-26#Cable>))
+Declaration(Class(<http://www.semanticweb.org/calonso/ontologies/2025/12/AsistenteDiagnosticoSimple_2025-26#Componente>))
+Declaration(Class(<http://www.semanticweb.org/calonso/ontologies/2025/12/AsistenteDiagnosticoSimple_2025-26#Diferencial>))
+Declaration(Class(<http://www.semanticweb.org/calonso/ontologies/2025/12/AsistenteDiagnosticoSimple_2025-26#Dispositivo>))
+Declaration(Class(<http://www.semanticweb.org/calonso/ontologies/2025/12/AsistenteDiagnosticoSimple_2025-26#Interruptor>))
+Declaration(Class(<http://www.semanticweb.org/calonso/ontologies/2025/12/AsistenteDiagnosticoSimple_2025-26#InterruptorSimple>))
+Declaration(ObjectProperty(<http://www.semanticweb.org/calonso/ontologies/2025/12/AsistenteDiagnosticoSimple_2025-26#conectadoA>))
+Declaration(DataProperty(<http://www.semanticweb.org/calonso/ontologies/2025/12/AsistenteDiagnosticoSimple_2025-26#estado>))
+Declaration(DataProperty(<http://www.semanticweb.org/calonso/ontologies/2025/12/AsistenteDiagnosticoSimple_2025-26#luce>))
+Declaration(DataProperty(<http://www.semanticweb.org/calonso/ontologies/2025/12/AsistenteDiagnosticoSimple_2025-26#posicion>))
+Declaration(DataProperty(<http://www.semanticweb.org/calonso/ontologies/2025/12/AsistenteDiagnosticoSimple_2025-26#tieneTension>))
+Declaration(NamedIndividual(<http://www.semanticweb.org/calonso/ontologies/2025/12/AsistenteDiagnosticoSimple_2025-26#cb1>))
+Declaration(NamedIndividual(<http://www.semanticweb.org/calonso/ontologies/2025/12/AsistenteDiagnosticoSimple_2025-26#l2>))
+Declaration(NamedIndividual(<http://www.semanticweb.org/calonso/ontologies/2025/12/AsistenteDiagnosticoSimple_2025-26#outsidePower>))
+Declaration(NamedIndividual(<http://www.semanticweb.org/calonso/ontologies/2025/12/AsistenteDiagnosticoSimple_2025-26#s3>))
+Declaration(NamedIndividual(<http://www.semanticweb.org/calonso/ontologies/2025/12/AsistenteDiagnosticoSimple_2025-26#w3>))
+Declaration(NamedIndividual(<http://www.semanticweb.org/calonso/ontologies/2025/12/AsistenteDiagnosticoSimple_2025-26#w4>))
+Declaration(NamedIndividual(<http://www.semanticweb.org/calonso/ontologies/2025/12/AsistenteDiagnosticoSimple_2025-26#w5>))
+Declaration(AnnotationProperty(<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled>))
+
+############################
+#   Object Properties
+############################
+
+# Object Property: <http://www.semanticweb.org/calonso/ontologies/2025/12/AsistenteDiagnosticoSimple_2025-26#conectadoA> (<http://www.semanticweb.org/calonso/ontologies/2025/12/AsistenteDiagnosticoSimple_2025-26#conectadoA>)
+
+ObjectPropertyDomain(<http://www.semanticweb.org/calonso/ontologies/2025/12/AsistenteDiagnosticoSimple_2025-26#conectadoA> <http://www.semanticweb.org/calonso/ontologies/2025/12/AsistenteDiagnosticoSimple_2025-26#Componente>)
+ObjectPropertyRange(<http://www.semanticweb.org/calonso/ontologies/2025/12/AsistenteDiagnosticoSimple_2025-26#conectadoA> <http://www.semanticweb.org/calonso/ontologies/2025/12/AsistenteDiagnosticoSimple_2025-26#Componente>)
+
+
+############################
+#   Data Properties
+############################
+
+# Data Property: <http://www.semanticweb.org/calonso/ontologies/2025/12/AsistenteDiagnosticoSimple_2025-26#estado> (<http://www.semanticweb.org/calonso/ontologies/2025/12/AsistenteDiagnosticoSimple_2025-26#estado>)
+
+FunctionalDataProperty(<http://www.semanticweb.org/calonso/ontologies/2025/12/AsistenteDiagnosticoSimple_2025-26#estado>)
+DataPropertyDomain(<http://www.semanticweb.org/calonso/ontologies/2025/12/AsistenteDiagnosticoSimple_2025-26#estado> <http://www.semanticweb.org/calonso/ontologies/2025/12/AsistenteDiagnosticoSimple_2025-26#Dispositivo>)
+DataPropertyRange(<http://www.semanticweb.org/calonso/ontologies/2025/12/AsistenteDiagnosticoSimple_2025-26#estado> DataOneOf("NOK" "OK"))
+
+# Data Property: <http://www.semanticweb.org/calonso/ontologies/2025/12/AsistenteDiagnosticoSimple_2025-26#luce> (<http://www.semanticweb.org/calonso/ontologies/2025/12/AsistenteDiagnosticoSimple_2025-26#luce>)
+
+FunctionalDataProperty(<http://www.semanticweb.org/calonso/ontologies/2025/12/AsistenteDiagnosticoSimple_2025-26#luce>)
+DataPropertyDomain(<http://www.semanticweb.org/calonso/ontologies/2025/12/AsistenteDiagnosticoSimple_2025-26#luce> <http://www.semanticweb.org/calonso/ontologies/2025/12/AsistenteDiagnosticoSimple_2025-26#Bombilla>)
+DataPropertyRange(<http://www.semanticweb.org/calonso/ontologies/2025/12/AsistenteDiagnosticoSimple_2025-26#luce> xsd:boolean)
+
+# Data Property: <http://www.semanticweb.org/calonso/ontologies/2025/12/AsistenteDiagnosticoSimple_2025-26#posicion> (<http://www.semanticweb.org/calonso/ontologies/2025/12/AsistenteDiagnosticoSimple_2025-26#posicion>)
+
+SubDataPropertyOf(<http://www.semanticweb.org/calonso/ontologies/2025/12/AsistenteDiagnosticoSimple_2025-26#posicion> owl:topDataProperty)
+FunctionalDataProperty(<http://www.semanticweb.org/calonso/ontologies/2025/12/AsistenteDiagnosticoSimple_2025-26#posicion>)
+DataPropertyDomain(<http://www.semanticweb.org/calonso/ontologies/2025/12/AsistenteDiagnosticoSimple_2025-26#posicion> <http://www.semanticweb.org/calonso/ontologies/2025/12/AsistenteDiagnosticoSimple_2025-26#InterruptorSimple>)
+DataPropertyRange(<http://www.semanticweb.org/calonso/ontologies/2025/12/AsistenteDiagnosticoSimple_2025-26#posicion> DataOneOf("Down" "Up"))
+
+# Data Property: <http://www.semanticweb.org/calonso/ontologies/2025/12/AsistenteDiagnosticoSimple_2025-26#tieneTension> (<http://www.semanticweb.org/calonso/ontologies/2025/12/AsistenteDiagnosticoSimple_2025-26#tieneTension>)
+
+SubDataPropertyOf(<http://www.semanticweb.org/calonso/ontologies/2025/12/AsistenteDiagnosticoSimple_2025-26#tieneTension> owl:topDataProperty)
+FunctionalDataProperty(<http://www.semanticweb.org/calonso/ontologies/2025/12/AsistenteDiagnosticoSimple_2025-26#tieneTension>)
+DataPropertyDomain(<http://www.semanticweb.org/calonso/ontologies/2025/12/AsistenteDiagnosticoSimple_2025-26#tieneTension> <http://www.semanticweb.org/calonso/ontologies/2025/12/AsistenteDiagnosticoSimple_2025-26#Componente>)
+DataPropertyRange(<http://www.semanticweb.org/calonso/ontologies/2025/12/AsistenteDiagnosticoSimple_2025-26#tieneTension> xsd:boolean)
+
+
+
+############################
+#   Classes
+############################
+
+# Class: <http://www.semanticweb.org/calonso/ontologies/2025/12/AsistenteDiagnosticoSimple_2025-26#Bombilla> (<http://www.semanticweb.org/calonso/ontologies/2025/12/AsistenteDiagnosticoSimple_2025-26#Bombilla>)
+
+SubClassOf(<http://www.semanticweb.org/calonso/ontologies/2025/12/AsistenteDiagnosticoSimple_2025-26#Bombilla> <http://www.semanticweb.org/calonso/ontologies/2025/12/AsistenteDiagnosticoSimple_2025-26#Dispositivo>)
+SubClassOf(<http://www.semanticweb.org/calonso/ontologies/2025/12/AsistenteDiagnosticoSimple_2025-26#Bombilla> DataSomeValuesFrom(<http://www.semanticweb.org/calonso/ontologies/2025/12/AsistenteDiagnosticoSimple_2025-26#luce> xsd:boolean))
+
+# Class: <http://www.semanticweb.org/calonso/ontologies/2025/12/AsistenteDiagnosticoSimple_2025-26#Cable> (<http://www.semanticweb.org/calonso/ontologies/2025/12/AsistenteDiagnosticoSimple_2025-26#Cable>)
+
+SubClassOf(<http://www.semanticweb.org/calonso/ontologies/2025/12/AsistenteDiagnosticoSimple_2025-26#Cable> <http://www.semanticweb.org/calonso/ontologies/2025/12/AsistenteDiagnosticoSimple_2025-26#Componente>)
+
+# Class: <http://www.semanticweb.org/calonso/ontologies/2025/12/AsistenteDiagnosticoSimple_2025-26#Componente> (<http://www.semanticweb.org/calonso/ontologies/2025/12/AsistenteDiagnosticoSimple_2025-26#Componente>)
+
+SubClassOf(<http://www.semanticweb.org/calonso/ontologies/2025/12/AsistenteDiagnosticoSimple_2025-26#Componente> DataSomeValuesFrom(<http://www.semanticweb.org/calonso/ontologies/2025/12/AsistenteDiagnosticoSimple_2025-26#tieneTension> xsd:boolean))
+
+# Class: <http://www.semanticweb.org/calonso/ontologies/2025/12/AsistenteDiagnosticoSimple_2025-26#Diferencial> (<http://www.semanticweb.org/calonso/ontologies/2025/12/AsistenteDiagnosticoSimple_2025-26#Diferencial>)
+
+SubClassOf(<http://www.semanticweb.org/calonso/ontologies/2025/12/AsistenteDiagnosticoSimple_2025-26#Diferencial> <http://www.semanticweb.org/calonso/ontologies/2025/12/AsistenteDiagnosticoSimple_2025-26#Dispositivo>)
+
+# Class: <http://www.semanticweb.org/calonso/ontologies/2025/12/AsistenteDiagnosticoSimple_2025-26#Dispositivo> (<http://www.semanticweb.org/calonso/ontologies/2025/12/AsistenteDiagnosticoSimple_2025-26#Dispositivo>)
+
+SubClassOf(<http://www.semanticweb.org/calonso/ontologies/2025/12/AsistenteDiagnosticoSimple_2025-26#Dispositivo> <http://www.semanticweb.org/calonso/ontologies/2025/12/AsistenteDiagnosticoSimple_2025-26#Componente>)
+SubClassOf(<http://www.semanticweb.org/calonso/ontologies/2025/12/AsistenteDiagnosticoSimple_2025-26#Dispositivo> DataSomeValuesFrom(<http://www.semanticweb.org/calonso/ontologies/2025/12/AsistenteDiagnosticoSimple_2025-26#estado> rdf:PlainLiteral))
+
+# Class: <http://www.semanticweb.org/calonso/ontologies/2025/12/AsistenteDiagnosticoSimple_2025-26#Interruptor> (<http://www.semanticweb.org/calonso/ontologies/2025/12/AsistenteDiagnosticoSimple_2025-26#Interruptor>)
+
+SubClassOf(<http://www.semanticweb.org/calonso/ontologies/2025/12/AsistenteDiagnosticoSimple_2025-26#Interruptor> <http://www.semanticweb.org/calonso/ontologies/2025/12/AsistenteDiagnosticoSimple_2025-26#Dispositivo>)
+
+# Class: <http://www.semanticweb.org/calonso/ontologies/2025/12/AsistenteDiagnosticoSimple_2025-26#InterruptorSimple> (<http://www.semanticweb.org/calonso/ontologies/2025/12/AsistenteDiagnosticoSimple_2025-26#InterruptorSimple>)
+
+SubClassOf(<http://www.semanticweb.org/calonso/ontologies/2025/12/AsistenteDiagnosticoSimple_2025-26#InterruptorSimple> <http://www.semanticweb.org/calonso/ontologies/2025/12/AsistenteDiagnosticoSimple_2025-26#Interruptor>)
+SubClassOf(<http://www.semanticweb.org/calonso/ontologies/2025/12/AsistenteDiagnosticoSimple_2025-26#InterruptorSimple> DataSomeValuesFrom(<http://www.semanticweb.org/calonso/ontologies/2025/12/AsistenteDiagnosticoSimple_2025-26#estado> rdf:PlainLiteral))
+SubClassOf(<http://www.semanticweb.org/calonso/ontologies/2025/12/AsistenteDiagnosticoSimple_2025-26#InterruptorSimple> DataSomeValuesFrom(<http://www.semanticweb.org/calonso/ontologies/2025/12/AsistenteDiagnosticoSimple_2025-26#posicion> rdf:PlainLiteral))
+
+
+############################
+#   Named Individuals
+############################
+
+# Individual: <http://www.semanticweb.org/calonso/ontologies/2025/12/AsistenteDiagnosticoSimple_2025-26#cb1> (<http://www.semanticweb.org/calonso/ontologies/2025/12/AsistenteDiagnosticoSimple_2025-26#cb1>)
+
+ClassAssertion(<http://www.semanticweb.org/calonso/ontologies/2025/12/AsistenteDiagnosticoSimple_2025-26#Diferencial> <http://www.semanticweb.org/calonso/ontologies/2025/12/AsistenteDiagnosticoSimple_2025-26#cb1>)
+ObjectPropertyAssertion(<http://www.semanticweb.org/calonso/ontologies/2025/12/AsistenteDiagnosticoSimple_2025-26#conectadoA> <http://www.semanticweb.org/calonso/ontologies/2025/12/AsistenteDiagnosticoSimple_2025-26#cb1> <http://www.semanticweb.org/calonso/ontologies/2025/12/AsistenteDiagnosticoSimple_2025-26#w3>)
+DataPropertyAssertion(<http://www.semanticweb.org/calonso/ontologies/2025/12/AsistenteDiagnosticoSimple_2025-26#estado> <http://www.semanticweb.org/calonso/ontologies/2025/12/AsistenteDiagnosticoSimple_2025-26#cb1> "OK")
+
+# Individual: <http://www.semanticweb.org/calonso/ontologies/2025/12/AsistenteDiagnosticoSimple_2025-26#l2> (<http://www.semanticweb.org/calonso/ontologies/2025/12/AsistenteDiagnosticoSimple_2025-26#l2>)
+
+ClassAssertion(<http://www.semanticweb.org/calonso/ontologies/2025/12/AsistenteDiagnosticoSimple_2025-26#Bombilla> <http://www.semanticweb.org/calonso/ontologies/2025/12/AsistenteDiagnosticoSimple_2025-26#l2>)
+DataPropertyAssertion(<http://www.semanticweb.org/calonso/ontologies/2025/12/AsistenteDiagnosticoSimple_2025-26#estado> <http://www.semanticweb.org/calonso/ontologies/2025/12/AsistenteDiagnosticoSimple_2025-26#l2> "OK")
+
+# Individual: <http://www.semanticweb.org/calonso/ontologies/2025/12/AsistenteDiagnosticoSimple_2025-26#outsidePower> (<http://www.semanticweb.org/calonso/ontologies/2025/12/AsistenteDiagnosticoSimple_2025-26#outsidePower>)
+
+ClassAssertion(<http://www.semanticweb.org/calonso/ontologies/2025/12/AsistenteDiagnosticoSimple_2025-26#Cable> <http://www.semanticweb.org/calonso/ontologies/2025/12/AsistenteDiagnosticoSimple_2025-26#outsidePower>)
+ObjectPropertyAssertion(<http://www.semanticweb.org/calonso/ontologies/2025/12/AsistenteDiagnosticoSimple_2025-26#conectadoA> <http://www.semanticweb.org/calonso/ontologies/2025/12/AsistenteDiagnosticoSimple_2025-26#outsidePower> <http://www.semanticweb.org/calonso/ontologies/2025/12/AsistenteDiagnosticoSimple_2025-26#w5>)
+DataPropertyAssertion(<http://www.semanticweb.org/calonso/ontologies/2025/12/AsistenteDiagnosticoSimple_2025-26#tieneTension> <http://www.semanticweb.org/calonso/ontologies/2025/12/AsistenteDiagnosticoSimple_2025-26#outsidePower> "true"^^xsd:boolean)
+
+# Individual: <http://www.semanticweb.org/calonso/ontologies/2025/12/AsistenteDiagnosticoSimple_2025-26#s3> (<http://www.semanticweb.org/calonso/ontologies/2025/12/AsistenteDiagnosticoSimple_2025-26#s3>)
+
+ClassAssertion(<http://www.semanticweb.org/calonso/ontologies/2025/12/AsistenteDiagnosticoSimple_2025-26#InterruptorSimple> <http://www.semanticweb.org/calonso/ontologies/2025/12/AsistenteDiagnosticoSimple_2025-26#s3>)
+ObjectPropertyAssertion(<http://www.semanticweb.org/calonso/ontologies/2025/12/AsistenteDiagnosticoSimple_2025-26#conectadoA> <http://www.semanticweb.org/calonso/ontologies/2025/12/AsistenteDiagnosticoSimple_2025-26#s3> <http://www.semanticweb.org/calonso/ontologies/2025/12/AsistenteDiagnosticoSimple_2025-26#w4>)
+DataPropertyAssertion(<http://www.semanticweb.org/calonso/ontologies/2025/12/AsistenteDiagnosticoSimple_2025-26#estado> <http://www.semanticweb.org/calonso/ontologies/2025/12/AsistenteDiagnosticoSimple_2025-26#s3> "OK")
+DataPropertyAssertion(<http://www.semanticweb.org/calonso/ontologies/2025/12/AsistenteDiagnosticoSimple_2025-26#posicion> <http://www.semanticweb.org/calonso/ontologies/2025/12/AsistenteDiagnosticoSimple_2025-26#s3> "Up")
+
+# Individual: <http://www.semanticweb.org/calonso/ontologies/2025/12/AsistenteDiagnosticoSimple_2025-26#w3> (<http://www.semanticweb.org/calonso/ontologies/2025/12/AsistenteDiagnosticoSimple_2025-26#w3>)
+
+ClassAssertion(<http://www.semanticweb.org/calonso/ontologies/2025/12/AsistenteDiagnosticoSimple_2025-26#Cable> <http://www.semanticweb.org/calonso/ontologies/2025/12/AsistenteDiagnosticoSimple_2025-26#w3>)
+ObjectPropertyAssertion(<http://www.semanticweb.org/calonso/ontologies/2025/12/AsistenteDiagnosticoSimple_2025-26#conectadoA> <http://www.semanticweb.org/calonso/ontologies/2025/12/AsistenteDiagnosticoSimple_2025-26#w3> <http://www.semanticweb.org/calonso/ontologies/2025/12/AsistenteDiagnosticoSimple_2025-26#s3>)
+
+# Individual: <http://www.semanticweb.org/calonso/ontologies/2025/12/AsistenteDiagnosticoSimple_2025-26#w4> (<http://www.semanticweb.org/calonso/ontologies/2025/12/AsistenteDiagnosticoSimple_2025-26#w4>)
+
+ClassAssertion(<http://www.semanticweb.org/calonso/ontologies/2025/12/AsistenteDiagnosticoSimple_2025-26#Cable> <http://www.semanticweb.org/calonso/ontologies/2025/12/AsistenteDiagnosticoSimple_2025-26#w4>)
+ObjectPropertyAssertion(<http://www.semanticweb.org/calonso/ontologies/2025/12/AsistenteDiagnosticoSimple_2025-26#conectadoA> <http://www.semanticweb.org/calonso/ontologies/2025/12/AsistenteDiagnosticoSimple_2025-26#w4> <http://www.semanticweb.org/calonso/ontologies/2025/12/AsistenteDiagnosticoSimple_2025-26#l2>)
+
+# Individual: <http://www.semanticweb.org/calonso/ontologies/2025/12/AsistenteDiagnosticoSimple_2025-26#w5> (<http://www.semanticweb.org/calonso/ontologies/2025/12/AsistenteDiagnosticoSimple_2025-26#w5>)
+
+ClassAssertion(<http://www.semanticweb.org/calonso/ontologies/2025/12/AsistenteDiagnosticoSimple_2025-26#Cable> <http://www.semanticweb.org/calonso/ontologies/2025/12/AsistenteDiagnosticoSimple_2025-26#w5>)
+ObjectPropertyAssertion(<http://www.semanticweb.org/calonso/ontologies/2025/12/AsistenteDiagnosticoSimple_2025-26#conectadoA> <http://www.semanticweb.org/calonso/ontologies/2025/12/AsistenteDiagnosticoSimple_2025-26#w5> <http://www.semanticweb.org/calonso/ontologies/2025/12/AsistenteDiagnosticoSimple_2025-26#cb1>)
+
+
+DLSafeRule(Annotation(<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean) Annotation(rdfs:comment "Si esta Ok y tiene tension, luce") Annotation(rdfs:label "Funcionamiento Bombilla") Body(ClassAtom(<http://www.semanticweb.org/calonso/ontologies/2025/12/AsistenteDiagnosticoSimple_2025-26#Bombilla> Variable(:x)) DataPropertyAtom(<http://www.semanticweb.org/calonso/ontologies/2025/12/AsistenteDiagnosticoSimple_2025-26#estado> Variable(:x) "OK") DataPropertyAtom(<http://www.semanticweb.org/calonso/ontologies/2025/12/AsistenteDiagnosticoSimple_2025-26#tieneTension> Variable(:x) "true"^^xsd:boolean))Head(DataPropertyAtom(<http://www.semanticweb.org/calonso/ontologies/2025/12/AsistenteDiagnosticoSimple_2025-26#luce> Variable(:x) "true"^^xsd:boolean)))
+DLSafeRule(Annotation(<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean) Annotation(rdfs:comment "Si esta Ok y tiene tension, luce") Annotation(rdfs:label "QueryBombillasEncendidas") Body(ClassAtom(<http://www.semanticweb.org/calonso/ontologies/2025/12/AsistenteDiagnosticoSimple_2025-26#Bombilla> Variable(:x)) DataPropertyAtom(<http://www.semanticweb.org/calonso/ontologies/2025/12/AsistenteDiagnosticoSimple_2025-26#estado> Variable(:x) "OK") DataPropertyAtom(<http://www.semanticweb.org/calonso/ontologies/2025/12/AsistenteDiagnosticoSimple_2025-26#tieneTension> Variable(:x) "true"^^xsd:boolean))Head(BuiltInAtom(<http://sqwrl.stanford.edu/ontologies/built-ins/3.4/sqwrl.owl#select> Variable(:x))))
+DLSafeRule(Annotation(<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean) Annotation(rdfs:comment "Si el cable tiene tension, a lo que esta conectado tambien") Annotation(rdfs:label "Propagacion de tension") Body(ClassAtom(<http://www.semanticweb.org/calonso/ontologies/2025/12/AsistenteDiagnosticoSimple_2025-26#Cable> Variable(:x)) DataPropertyAtom(<http://www.semanticweb.org/calonso/ontologies/2025/12/AsistenteDiagnosticoSimple_2025-26#tieneTension> Variable(:x) "true"^^xsd:boolean) ObjectPropertyAtom(<http://www.semanticweb.org/calonso/ontologies/2025/12/AsistenteDiagnosticoSimple_2025-26#conectadoA> Variable(:x) Variable(:y)))Head(DataPropertyAtom(<http://www.semanticweb.org/calonso/ontologies/2025/12/AsistenteDiagnosticoSimple_2025-26#tieneTension> Variable(:y) "true"^^xsd:boolean)))
+DLSafeRule(Annotation(<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean) Annotation(rdfs:comment "Si el diferencial funciona correctamente, conecta 2 cables") Annotation(rdfs:label "Funcionamiento diferencial") Body(ClassAtom(<http://www.semanticweb.org/calonso/ontologies/2025/12/AsistenteDiagnosticoSimple_2025-26#Diferencial> Variable(:x)) DataPropertyAtom(<http://www.semanticweb.org/calonso/ontologies/2025/12/AsistenteDiagnosticoSimple_2025-26#estado> Variable(:x) "OK") ObjectPropertyAtom(<http://www.semanticweb.org/calonso/ontologies/2025/12/AsistenteDiagnosticoSimple_2025-26#conectadoA> Variable(:c1) Variable(:x)) ObjectPropertyAtom(<http://www.semanticweb.org/calonso/ontologies/2025/12/AsistenteDiagnosticoSimple_2025-26#conectadoA> Variable(:x) Variable(:c2)))Head(ObjectPropertyAtom(<http://www.semanticweb.org/calonso/ontologies/2025/12/AsistenteDiagnosticoSimple_2025-26#conectadoA> Variable(:c1) Variable(:c2))))
+DLSafeRule(Annotation(<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean) Annotation(rdfs:comment "Si está OK y Up, conecta los cables") Annotation(rdfs:label "Funcionamiento Interruptor Simple") Body(ClassAtom(<http://www.semanticweb.org/calonso/ontologies/2025/12/AsistenteDiagnosticoSimple_2025-26#InterruptorSimple> Variable(:x)) DataPropertyAtom(<http://www.semanticweb.org/calonso/ontologies/2025/12/AsistenteDiagnosticoSimple_2025-26#estado> Variable(:x) "OK") DataPropertyAtom(<http://www.semanticweb.org/calonso/ontologies/2025/12/AsistenteDiagnosticoSimple_2025-26#posicion> Variable(:x) "Up") ObjectPropertyAtom(<http://www.semanticweb.org/calonso/ontologies/2025/12/AsistenteDiagnosticoSimple_2025-26#conectadoA> Variable(:c1) Variable(:x)) ObjectPropertyAtom(<http://www.semanticweb.org/calonso/ontologies/2025/12/AsistenteDiagnosticoSimple_2025-26#conectadoA> Variable(:x) Variable(:c2)))Head(ObjectPropertyAtom(<http://www.semanticweb.org/calonso/ontologies/2025/12/AsistenteDiagnosticoSimple_2025-26#conectadoA> Variable(:c1) Variable(:c2))))
+)

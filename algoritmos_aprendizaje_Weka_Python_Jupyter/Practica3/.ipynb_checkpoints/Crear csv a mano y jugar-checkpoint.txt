@@ -1,0 +1,14 @@
+Crear csv a mano y jugar con la profundidad del arbol para que
+coincida con lo que sale en teoria
+Dataset de sklearn para acceder a la base de datos publica
+
+
+
+
+
+
+
+
+
+Entrega cuanderno jupyter parte 1 y parte 2,
+resultados de weka se volcaran en cajas de texto, respuestas escritas en cajas de texto

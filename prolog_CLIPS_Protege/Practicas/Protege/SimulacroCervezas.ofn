@@ -1,0 +1,283 @@
+Prefix(:=<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen/>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+
+
+Ontology(<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen>
+Annotation(rdfs:comment "Simulacro del examen del anio pasado con tipos de cervezas")
+
+Declaration(Class(<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#Cerveza>))
+Declaration(Class(<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#CervezaDeBajaGraduacion>))
+Declaration(Class(<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#CervezaFabricadaEnPaisEspaña>))
+Declaration(Class(<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#CervezaMahou>))
+Declaration(Class(<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#CervezaRubia>))
+Declaration(Class(<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#FabricaCerveza>))
+Declaration(Class(<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#FabricaDe2CervezasDistintas>))
+Declaration(Class(<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#FabricaDeCervezaRubia>))
+Declaration(Class(<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#Marca>))
+Declaration(Class(<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#MarcaConAlMenos2CervezasDistintas>))
+Declaration(Class(<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#Pais>))
+Declaration(Class(<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#PaisFabricante>))
+Declaration(Class(<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#PaisFabricantesDeAlMenos2CervezasRubias>))
+Declaration(Class(<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#TipoCerveza>))
+Declaration(ObjectProperty(<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#cervezaFabricadaEn>))
+Declaration(ObjectProperty(<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#cervezaMarca>))
+Declaration(ObjectProperty(<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#esFabricadaPor>))
+Declaration(ObjectProperty(<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#esMarca>))
+Declaration(ObjectProperty(<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#esTipo>))
+Declaration(ObjectProperty(<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#estaEnPais>))
+Declaration(ObjectProperty(<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#fabricaCerveza>))
+Declaration(ObjectProperty(<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#paisFabricaCerveza>))
+Declaration(ObjectProperty(<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#tieneFabrica>))
+Declaration(DataProperty(<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#graduacion>))
+Declaration(NamedIndividual(<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#Alovera>))
+Declaration(NamedIndividual(<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#Dublin>))
+Declaration(NamedIndividual(<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#España>))
+Declaration(NamedIndividual(<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#Guinness>))
+Declaration(NamedIndividual(<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#GuinnessStout>))
+Declaration(NamedIndividual(<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#Irlanda>))
+Declaration(NamedIndividual(<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#Mahou>))
+Declaration(NamedIndividual(<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#Mahou5Estrellas>))
+Declaration(NamedIndividual(<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#MahouClasica>))
+Declaration(NamedIndividual(<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#Malaga>))
+Declaration(NamedIndividual(<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#Milana>))
+Declaration(NamedIndividual(<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#MilanaTostada>))
+Declaration(NamedIndividual(<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#MonteMayor>))
+Declaration(NamedIndividual(<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#Negra>))
+Declaration(NamedIndividual(<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#Rubia>))
+Declaration(NamedIndividual(<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#Tostada>))
+Declaration(AnnotationProperty(<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled>))
+
+############################
+#   Object Properties
+############################
+
+# Object Property: <http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#cervezaFabricadaEn> (<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#cervezaFabricadaEn>)
+
+SubObjectPropertyOf(<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#cervezaFabricadaEn> owl:topObjectProperty)
+InverseObjectProperties(<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#cervezaFabricadaEn> <http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#paisFabricaCerveza>)
+ObjectPropertyDomain(<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#cervezaFabricadaEn> <http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#Cerveza>)
+ObjectPropertyRange(<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#cervezaFabricadaEn> <http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#Pais>)
+
+# Object Property: <http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#cervezaMarca> (<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#cervezaMarca>)
+
+SubObjectPropertyOf(<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#cervezaMarca> owl:topObjectProperty)
+InverseObjectProperties(<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#cervezaMarca> <http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#esMarca>)
+
+# Object Property: <http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#esFabricadaPor> (<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#esFabricadaPor>)
+
+SubObjectPropertyOf(<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#esFabricadaPor> owl:topObjectProperty)
+InverseObjectProperties(<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#esFabricadaPor> <http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#fabricaCerveza>)
+
+# Object Property: <http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#esMarca> (<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#esMarca>)
+
+SubObjectPropertyOf(<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#esMarca> owl:topObjectProperty)
+ObjectPropertyDomain(<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#esMarca> <http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#Cerveza>)
+ObjectPropertyRange(<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#esMarca> <http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#Marca>)
+
+# Object Property: <http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#esTipo> (<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#esTipo>)
+
+SubObjectPropertyOf(<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#esTipo> owl:topObjectProperty)
+ObjectPropertyDomain(<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#esTipo> <http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#Cerveza>)
+ObjectPropertyRange(<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#esTipo> <http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#TipoCerveza>)
+
+# Object Property: <http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#estaEnPais> (<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#estaEnPais>)
+
+SubObjectPropertyOf(<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#estaEnPais> owl:topObjectProperty)
+InverseObjectProperties(<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#estaEnPais> <http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#tieneFabrica>)
+
+# Object Property: <http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#fabricaCerveza> (<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#fabricaCerveza>)
+
+SubObjectPropertyOf(<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#fabricaCerveza> owl:topObjectProperty)
+ObjectPropertyDomain(<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#fabricaCerveza> <http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#FabricaCerveza>)
+ObjectPropertyRange(<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#fabricaCerveza> <http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#Cerveza>)
+
+# Object Property: <http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#paisFabricaCerveza> (<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#paisFabricaCerveza>)
+
+SubObjectPropertyOf(<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#paisFabricaCerveza> owl:topObjectProperty)
+
+# Object Property: <http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#tieneFabrica> (<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#tieneFabrica>)
+
+SubObjectPropertyOf(<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#tieneFabrica> owl:topObjectProperty)
+ObjectPropertyDomain(<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#tieneFabrica> <http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#PaisFabricante>)
+ObjectPropertyRange(<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#tieneFabrica> <http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#FabricaCerveza>)
+
+
+############################
+#   Data Properties
+############################
+
+# Data Property: <http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#graduacion> (<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#graduacion>)
+
+SubDataPropertyOf(<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#graduacion> owl:topDataProperty)
+FunctionalDataProperty(<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#graduacion>)
+DataPropertyDomain(<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#graduacion> <http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#Cerveza>)
+DataPropertyRange(<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#graduacion> xsd:decimal)
+
+
+
+############################
+#   Classes
+############################
+
+# Class: <http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#Cerveza> (<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#Cerveza>)
+
+SubClassOf(<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#Cerveza> ObjectSomeValuesFrom(<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#esMarca> <http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#Marca>))
+SubClassOf(<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#Cerveza> ObjectSomeValuesFrom(<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#esTipo> <http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#TipoCerveza>))
+SubClassOf(<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#Cerveza> DataSomeValuesFrom(<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#graduacion> xsd:decimal))
+
+# Class: <http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#CervezaDeBajaGraduacion> (<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#CervezaDeBajaGraduacion>)
+
+EquivalentClasses(<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#CervezaDeBajaGraduacion> ObjectIntersectionOf(<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#Cerveza> DataSomeValuesFrom(<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#graduacion> DatatypeRestriction(xsd:decimal xsd:maxExclusive "5.0"^^xsd:decimal))))
+
+# Class: <http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#CervezaFabricadaEnPaisEspaña> (<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#CervezaFabricadaEnPaisEspaña>)
+
+EquivalentClasses(<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#CervezaFabricadaEnPaisEspaña> ObjectIntersectionOf(<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#Cerveza> ObjectHasValue(<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#cervezaFabricadaEn> <http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#España>)))
+
+# Class: <http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#CervezaMahou> (<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#CervezaMahou>)
+
+EquivalentClasses(<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#CervezaMahou> ObjectIntersectionOf(<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#Cerveza> ObjectHasValue(<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#esMarca> <http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#Mahou>)))
+
+# Class: <http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#CervezaRubia> (<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#CervezaRubia>)
+
+EquivalentClasses(<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#CervezaRubia> ObjectIntersectionOf(<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#Cerveza> ObjectHasValue(<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#esTipo> <http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#Rubia>)))
+
+# Class: <http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#FabricaCerveza> (<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#FabricaCerveza>)
+
+SubClassOf(<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#FabricaCerveza> ObjectSomeValuesFrom(<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#fabricaCerveza> <http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#Cerveza>))
+
+# Class: <http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#FabricaDe2CervezasDistintas> (<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#FabricaDe2CervezasDistintas>)
+
+EquivalentClasses(<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#FabricaDe2CervezasDistintas> ObjectIntersectionOf(<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#FabricaCerveza> ObjectExactCardinality(2 <http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#fabricaCerveza> <http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#Cerveza>)))
+
+# Class: <http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#FabricaDeCervezaRubia> (<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#FabricaDeCervezaRubia>)
+
+EquivalentClasses(<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#FabricaDeCervezaRubia> ObjectIntersectionOf(<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#FabricaCerveza> ObjectSomeValuesFrom(<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#fabricaCerveza> <http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#CervezaRubia>)))
+
+# Class: <http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#Marca> (<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#Marca>)
+
+SubClassOf(<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#Marca> ObjectSomeValuesFrom(<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#cervezaMarca> <http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#Cerveza>))
+
+# Class: <http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#MarcaConAlMenos2CervezasDistintas> (<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#MarcaConAlMenos2CervezasDistintas>)
+
+EquivalentClasses(<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#MarcaConAlMenos2CervezasDistintas> ObjectIntersectionOf(<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#Marca> ObjectMinCardinality(2 <http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#cervezaMarca> <http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#Cerveza>)))
+
+# Class: <http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#PaisFabricante> (<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#PaisFabricante>)
+
+SubClassOf(<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#PaisFabricante> <http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#Pais>)
+SubClassOf(<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#PaisFabricante> ObjectSomeValuesFrom(<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#tieneFabrica> <http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#FabricaCerveza>))
+
+# Class: <http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#PaisFabricantesDeAlMenos2CervezasRubias> (<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#PaisFabricantesDeAlMenos2CervezasRubias>)
+
+EquivalentClasses(<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#PaisFabricantesDeAlMenos2CervezasRubias> ObjectIntersectionOf(<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#PaisFabricante> ObjectMinCardinality(2 <http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#tieneFabrica> <http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#FabricaDeCervezaRubia>)))
+
+# Class: <http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#TipoCerveza> (<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#TipoCerveza>)
+
+EquivalentClasses(<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#TipoCerveza> ObjectOneOf(<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#Negra> <http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#Rubia> <http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#Tostada>))
+
+
+############################
+#   Named Individuals
+############################
+
+# Individual: <http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#Alovera> (<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#Alovera>)
+
+ClassAssertion(<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#FabricaCerveza> <http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#Alovera>)
+ClassAssertion(ObjectAllValuesFrom(<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#fabricaCerveza> ObjectOneOf(<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#Mahou5Estrellas> <http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#MahouClasica>)) <http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#Alovera>)
+ObjectPropertyAssertion(<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#fabricaCerveza> <http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#Alovera> <http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#Mahou5Estrellas>)
+ObjectPropertyAssertion(<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#fabricaCerveza> <http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#Alovera> <http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#MahouClasica>)
+
+# Individual: <http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#Dublin> (<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#Dublin>)
+
+ClassAssertion(<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#FabricaCerveza> <http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#Dublin>)
+ClassAssertion(ObjectAllValuesFrom(<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#fabricaCerveza> ObjectOneOf(<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#GuinnessStout>)) <http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#Dublin>)
+ObjectPropertyAssertion(<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#fabricaCerveza> <http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#Dublin> <http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#GuinnessStout>)
+
+# Individual: <http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#España> (<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#España>)
+
+ClassAssertion(<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#Pais> <http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#España>)
+ObjectPropertyAssertion(<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#tieneFabrica> <http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#España> <http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#Alovera>)
+ObjectPropertyAssertion(<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#tieneFabrica> <http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#España> <http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#Malaga>)
+ObjectPropertyAssertion(<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#tieneFabrica> <http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#España> <http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#MonteMayor>)
+
+# Individual: <http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#Guinness> (<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#Guinness>)
+
+ClassAssertion(<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#Marca> <http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#Guinness>)
+
+# Individual: <http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#GuinnessStout> (<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#GuinnessStout>)
+
+ClassAssertion(<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#Cerveza> <http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#GuinnessStout>)
+ObjectPropertyAssertion(<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#esMarca> <http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#GuinnessStout> <http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#Guinness>)
+ObjectPropertyAssertion(<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#esTipo> <http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#GuinnessStout> <http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#Negra>)
+DataPropertyAssertion(<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#graduacion> <http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#GuinnessStout> "4.3"^^xsd:decimal)
+
+# Individual: <http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#Irlanda> (<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#Irlanda>)
+
+ClassAssertion(<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#Pais> <http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#Irlanda>)
+ObjectPropertyAssertion(<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#tieneFabrica> <http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#Irlanda> <http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#Dublin>)
+
+# Individual: <http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#Mahou> (<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#Mahou>)
+
+ClassAssertion(<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#Marca> <http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#Mahou>)
+
+# Individual: <http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#Mahou5Estrellas> (<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#Mahou5Estrellas>)
+
+ClassAssertion(<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#Cerveza> <http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#Mahou5Estrellas>)
+ObjectPropertyAssertion(<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#esMarca> <http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#Mahou5Estrellas> <http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#Mahou>)
+ObjectPropertyAssertion(<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#esTipo> <http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#Mahou5Estrellas> <http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#Rubia>)
+DataPropertyAssertion(<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#graduacion> <http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#Mahou5Estrellas> "5.5"^^xsd:decimal)
+
+# Individual: <http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#MahouClasica> (<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#MahouClasica>)
+
+ClassAssertion(<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#Cerveza> <http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#MahouClasica>)
+ObjectPropertyAssertion(<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#esMarca> <http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#MahouClasica> <http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#Mahou>)
+ObjectPropertyAssertion(<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#esTipo> <http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#MahouClasica> <http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#Rubia>)
+DataPropertyAssertion(<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#graduacion> <http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#MahouClasica> "4.8"^^xsd:decimal)
+
+# Individual: <http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#Malaga> (<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#Malaga>)
+
+ClassAssertion(<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#FabricaCerveza> <http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#Malaga>)
+ClassAssertion(ObjectAllValuesFrom(<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#fabricaCerveza> ObjectOneOf(<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#Mahou5Estrellas>)) <http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#Malaga>)
+ObjectPropertyAssertion(<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#fabricaCerveza> <http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#Malaga> <http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#Mahou5Estrellas>)
+
+# Individual: <http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#Milana> (<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#Milana>)
+
+ClassAssertion(<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#Marca> <http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#Milana>)
+
+# Individual: <http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#MilanaTostada> (<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#MilanaTostada>)
+
+ClassAssertion(<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#Cerveza> <http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#MilanaTostada>)
+ObjectPropertyAssertion(<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#esMarca> <http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#MilanaTostada> <http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#Milana>)
+ObjectPropertyAssertion(<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#esTipo> <http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#MilanaTostada> <http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#Tostada>)
+DataPropertyAssertion(<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#graduacion> <http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#MilanaTostada> "5.8"^^xsd:decimal)
+
+# Individual: <http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#MonteMayor> (<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#MonteMayor>)
+
+ClassAssertion(<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#FabricaCerveza> <http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#MonteMayor>)
+ClassAssertion(ObjectAllValuesFrom(<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#fabricaCerveza> ObjectOneOf(<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#MilanaTostada>)) <http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#MonteMayor>)
+ObjectPropertyAssertion(<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#fabricaCerveza> <http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#MonteMayor> <http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#MilanaTostada>)
+
+# Individual: <http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#Negra> (<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#Negra>)
+
+ClassAssertion(<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#TipoCerveza> <http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#Negra>)
+
+# Individual: <http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#Rubia> (<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#Rubia>)
+
+ClassAssertion(<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#TipoCerveza> <http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#Rubia>)
+
+# Individual: <http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#Tostada> (<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#Tostada>)
+
+ClassAssertion(<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#TipoCerveza> <http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#Tostada>)
+
+
+DisjointClasses(<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#Cerveza> <http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#FabricaCerveza> <http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#PaisFabricante> <http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#TipoCerveza>)
+DifferentIndividuals(<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#Alovera> <http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#Dublin> <http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#Malaga> <http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#MonteMayor>)
+DifferentIndividuals(<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#España> <http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#Irlanda>)
+DifferentIndividuals(<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#Guinness> <http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#Mahou> <http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#Milana>)
+DifferentIndividuals(<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#GuinnessStout> <http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#Mahou5Estrellas> <http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#MahouClasica> <http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#MilanaTostada>)
+DLSafeRule(Annotation(<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean) Annotation(rdfs:comment "Identifica cervezas fabricadas en españa") Annotation(rdfs:label "Cervezas De España") Body(ClassAtom(<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#Cerveza> Variable(:c)) ObjectPropertyAtom(<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#estaEnPais> Variable(:f) <http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#España>) ObjectPropertyAtom(<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#esFabricadaPor> Variable(:c) Variable(:f)))Head(ObjectPropertyAtom(<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#cervezaFabricadaEn> Variable(:c) <http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#España>)))
+DLSafeRule(Annotation(<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean) Annotation(rdfs:comment "Identifica cervezas fabricadas en españa") Annotation(rdfs:label "Query Cervezas Fabricadas España") Body(ObjectPropertyAtom(<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#esFabricadaPor> Variable(:c) Variable(:f)) ObjectPropertyAtom(<http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#estaEnPais> Variable(:f) <http://www.semanticweb.org/aacar/ontologies/2025/11/SimulacroExamen#España>))Head(BuiltInAtom(<http://sqwrl.stanford.edu/ontologies/built-ins/3.4/sqwrl.owl#select> Variable(:c) Variable(:f))))
+)

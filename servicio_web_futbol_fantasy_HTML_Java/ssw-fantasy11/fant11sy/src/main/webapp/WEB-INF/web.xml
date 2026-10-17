@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd"
+   version="6.0">
+    
+    <!-- definicion de servlets -->
+    <servlet> 
+        <servlet-name>CargaDatosServletInterno</servlet-name>
+        <servlet-class>com.uva.fant11sy.servlets.CargaDatosServlet</servlet-class> 
+    </servlet>
+
+    <servlet> 
+        <servlet-name>RegistroServletInterno</servlet-name>
+        <servlet-class>com.uva.fant11sy.servlets.RegistroServlet</servlet-class> 
+    </servlet>
+    
+    <servlet> 
+        <servlet-name>LoginServletInterno</servlet-name>
+        <servlet-class>com.uva.fant11sy.servlets.LoginServlet</servlet-class> 
+    </servlet>
+    
+    <servlet> 
+        <servlet-name>LogoutServletInterno</servlet-name>
+        <servlet-class>com.uva.fant11sy.servlets.LogoutServlet</servlet-class> 
+    </servlet>
+    
+    <servlet> 
+        <servlet-name>PrincipalServletInterno</servlet-name>
+        <servlet-class>com.uva.fant11sy.servlets.PrincipalServlet</servlet-class> 
+    </servlet>
+    
+    <servlet> 
+        <servlet-name>CalendarioServletInterno</servlet-name>
+        <servlet-class>com.uva.fant11sy.servlets.CalendarioServlet</servlet-class> 
+    </servlet>
+    
+    <servlet> 
+        <servlet-name>ClasificacionServletInterno</servlet-name>
+        <servlet-class>com.uva.fant11sy.servlets.ClasificacionServlet</servlet-class> 
+    </servlet>
+    
+    <servlet> 
+        <servlet-name>ClubServletInterno</servlet-name>
+        <servlet-class>com.uva.fant11sy.servlets.ClubServlet</servlet-class> 
+    </servlet>
+    
+    <servlet> 
+        <servlet-name>EquipoServletInterno</servlet-name>
+        <servlet-class>com.uva.fant11sy.servlets.EquipoServlet</servlet-class> 
+    </servlet>
+    
+    <servlet> 
+        <servlet-name>CambiarFormacionServletInterno</servlet-name>
+        <servlet-class>com.uva.fant11sy.servlets.CambiarFormacionServlet</servlet-class> 
+    </servlet>
+    
+    <servlet> 
+        <servlet-name>MercadoServletInterno</servlet-name>
+        <servlet-class>com.uva.fant11sy.servlets.MercadoServlet</servlet-class> 
+    </servlet>
+    
+    <servlet> 
+        <servlet-name>FicharServletInterno</servlet-name>
+        <servlet-class>com.uva.fant11sy.servlets.FicharServlet</servlet-class> 
+    </servlet>
+    
+    <servlet> 
+        <servlet-name>ActualizarJornadaServletInterno</servlet-name>
+        <servlet-class>com.uva.fant11sy.servlets.ActualizarJornadaServlet</servlet-class> 
+    </servlet>
+    
+    <!-- mapeo de servlets -->
+    <servlet-mapping> 
+        <servlet-name>CargaDatosServletInterno</servlet-name>
+        <url-pattern>/cargar-api</url-pattern> 
+    </servlet-mapping>
+    
+    <servlet-mapping> 
+        <servlet-name>RegistroServletInterno</servlet-name>
+        <url-pattern>/RegistroServlet</url-pattern> 
+    </servlet-mapping>
+    
+    <servlet-mapping> 
+        <servlet-name>LoginServletInterno</servlet-name>
+        <url-pattern>/LoginServlet</url-pattern> 
+    </servlet-mapping>
+    
+    <servlet-mapping> 
+        <servlet-name>LogoutServletInterno</servlet-name>
+        <url-pattern>/LogoutServlet</url-pattern> 
+    </servlet-mapping>
+    
+    <servlet-mapping> 
+        <servlet-name>PrincipalServletInterno</servlet-name>
+        <url-pattern>/PrincipalServlet</url-pattern> 
+    </servlet-mapping>
+    
+    <servlet-mapping> 
+        <servlet-name>CalendarioServletInterno</servlet-name>
+        <url-pattern>/CalendarioServlet</url-pattern> 
+    </servlet-mapping>
+    
+    <servlet-mapping> 
+        <servlet-name>ClasificacionServletInterno</servlet-name>
+        <url-pattern>/ClasificacionServlet</url-pattern> 
+    </servlet-mapping>
+    
+    <servlet-mapping> 
+        <servlet-name>ClubServletInterno</servlet-name>
+        <url-pattern>/ClubServlet</url-pattern> 
+    </servlet-mapping>
+    
+    <servlet-mapping> 
+        <servlet-name>EquipoServletInterno</servlet-name>
+        <url-pattern>/EquipoServlet</url-pattern> 
+    </servlet-mapping>
+    
+    <servlet-mapping> 
+        <servlet-name>CambiarFormacionServletInterno</servlet-name>
+        <url-pattern>/CambiarFormacionServlet</url-pattern> 
+    </servlet-mapping>
+    
+    <servlet-mapping> 
+        <servlet-name>MercadoServletInterno</servlet-name>
+        <url-pattern>/MercadoServlet</url-pattern> 
+    </servlet-mapping>
+    
+    <servlet-mapping> 
+        <servlet-name>FicharServletInterno</servlet-name>
+        <url-pattern>/FicharServlet</url-pattern> 
+    </servlet-mapping>
+    
+    <servlet-mapping> 
+        <servlet-name>ActualizarJornadaServletInterno</servlet-name>
+        <url-pattern>/ActualizarJornadaServlet</url-pattern> 
+    </servlet-mapping>
+    
+    <!-- configuracion -->
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+    
+    <welcome-file-list>
+        <welcome-file>login.jsp</welcome-file>
+    </welcome-file-list>
+    
+    
+    <error-page>
+        <exception-type>java.lang.Throwable</exception-type>
+        <location>/error.jsp</location>
+    </error-page>
+
+    <error-page>
+        <error-code>500</error-code>
+        <location>/error.jsp</location>
+    </error-page>
+
+    <error-page>
+        <error-code>404</error-code>
+        <location>/error.jsp</location>
+    </error-page>
+    
+    
+</web-app>

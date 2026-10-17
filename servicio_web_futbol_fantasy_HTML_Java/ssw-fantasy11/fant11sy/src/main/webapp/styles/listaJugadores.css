@@ -1,0 +1,160 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+
+/*Proyecto realizado por el grupo 12*/
+
+header {
+            display: flex;
+            align-items: center;
+            padding: 15px 30px;
+            border-bottom: 3px solid black;
+            position: relative;
+            background: white;
+}
+
+.logo { 
+    height: 50px; 
+}
+
+h1 {
+            position: absolute;
+            left: 0;
+            right: 0;
+            pointer-events: none;
+            text-align: center;
+            font-size: 26px;
+            margin: 0;         
+}
+
+.contenedor{
+    
+            padding: 20px 30px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+    
+}
+
+.controles-superior {
+            width: 100%;
+            max-width: 1000px;
+            display: flex;
+            justify-content: flex-end;
+            margin-bottom: 20px;/*margen con la parte de abajo*/
+}
+
+
+.selector-posicion {
+            border: 3px solid black;
+            padding: 8px 15px;
+            font-size: 18px;
+            font-weight: bold;
+            background: white;
+            cursor: pointer;
+            
+}
+
+.tabla-contenedor {
+            width: 100%;
+            max-width: 1000px;
+            background: white;
+            border: 3px solid black;
+            margin-bottom: 40px;
+}
+
+table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 16px;
+}
+
+
+th {
+            background: #f2f2f2;
+            border-bottom: 3px solid black;
+            padding: 12px;
+            text-align: center;
+            font-weight: bold;
+}
+
+td {
+            padding: 10px;
+            border-bottom: 1px solid #ccc;
+            text-align: center;
+            font-weight: bold;
+            vertical-align: middle;/*alineacion vertical en el medio */
+}
+/*Para cuando se pasa por encima el raton */
+tbody tr:hover {
+            background-color: #f0f0f0;
+}
+
+.col-pos { 
+    width: 60px; 
+}
+        
+.col-foto { 
+    width: 70px; 
+}
+        
+.col-nombre { 
+    text-align: center; 
+    padding-left: 20px; 
+    font-size: 18px;
+}
+        
+.col-club { 
+    width: 100px; 
+} 
+        
+.col-nac { 
+    width: 120px; 
+    font-size: 18px; 
+    color: #555;
+    font-weight: bold;
+}
+        
+.col-puntos { 
+    width: 80px; 
+    font-size: 20px; 
+}
+
+.foto-jugador, .logo-club {
+            width: 50px;
+            height: 50px;
+            border: 2px solid black;
+            border-radius: 8px;
+            object-fit: contain; 
+            display: block;
+            margin: 0 auto;
+            background: white;
+}
+
+.tag-pos {
+            background: black;
+            color: white;
+            padding: 3px 6px;
+            font-size: 12px;
+            border-radius: 4px;
+}
+
+.btn-equipo {
+            background-color: #d9534f;
+            color: white;
+            border: none;
+            padding: 12px 40px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            box-shadow: 0px 4px 0px #a94442;
+            display: block;  
+            margin: 30px auto;
+            text-decoration: none;
+}
+
+.btn-equipo:hover { 
+            background-color: #c9302c; 
+}

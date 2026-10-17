@@ -1,0 +1,104 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+
+/*Proyecto creado por el grupo 12*/
+
+.contenedor{
+        
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-image: url('../images/latagol.jpeg'); 
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        background-attachment: fixed;
+}
+
+
+.logo{
+    
+    width: 260px;
+    margin-bottom: 10px;
+    
+}
+
+h2{
+    
+    margin: 10px 0 25px;
+    
+}
+
+
+.formulario{ 
+    
+    display: inline-block;
+    text-align: left;
+    
+}
+
+.fila{ 
+    
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+label{ 
+    
+    width: 130px;
+    font-weight: bold;/*fuente negrita*/
+    
+}
+
+input{
+        width:220px;
+        height:28px;
+        border:3px solid black;
+        outline:none;
+        padding-left:2px;
+        font-size:14px;
+        background:#f3f3f3;
+}
+
+
+.password-container{
+        display:flex;
+        align-items:center;
+}
+
+
+
+.btn{
+    
+        margin-top:25px;
+        display:flex;
+        justify-content:center;
+        
+    
+}
+
+.button{
+    
+        
+        background:#4f86c6;
+        border:3px solid black;
+        border-radius:18px;/*esquinas redondeadas*/
+        padding:12px 35px;
+        font-size:18px;
+        font-weight:bold;
+        cursor:pointer;
+        color:black;
+        text-decoration:none;
+}
+
+.button:hover{
+        background:#3b6fa8;
+        color:white;
+        
+}

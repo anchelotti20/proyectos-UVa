@@ -1,0 +1,18 @@
+@startuml
+[*] --> SinResolver : registarIncidencia(descripcion:String, criticidad:NivelCriticidad)
+
+
+state SinResolver{
+ state c <<choice>> 
+ [*] --> c
+ c --> DiagnosticoRemoto : [sePuedeResolverRemotamente]
+ c --> PendienteAsignacion : [NoSePuedeResolverRemotamente]
+ DiagnosticoRemoto --> PendienteAsignacion : after(SlaVencido)
+ DiagnosticoRemoto --> DiagnosticoRemoto : accionRemota() [resuelve = false]
+ PendienteAsignacion --> PendienteAceptacionTecnico : asignarTecnico()
+ PendienteAceptacionTecnico --> PendienteAsignacion : after(10min)
+ PendienteAceptacionTecnico --> DiagnosticoInSitu : aceptarIncidencia()
+}
+ DiagnosticoRemoto --> ResueltaRemotamente : accionRemota() [resuelve = true]
+ 
+@enduml

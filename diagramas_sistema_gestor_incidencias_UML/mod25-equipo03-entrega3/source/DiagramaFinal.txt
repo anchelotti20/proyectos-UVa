@@ -1,0 +1,42 @@
+@startuml
+hide empty description
+
+[*] --> SinResolver : registarIncidencia(descripcion:String, criticidad:NivelCriticidad)
+
+state SinResolver {
+  state DiagnosticoRemoto
+  state PendienteAsignacion
+  state PendienteAceptacionTecnico
+  state DiagnosticoInSitu
+  
+  state c <<choice>>
+
+  [*] --> c
+  
+  c --> DiagnosticoRemoto : [sePuedeResolverRemotamente]
+  c --> PendienteAsignacion : [NoSePuedeResolverRemotamente]
+
+  DiagnosticoRemoto --> DiagnosticoRemoto : accionRemota()\n[resuelve = false]
+  DiagnosticoRemoto --> PendienteAsignacion : when\n(tiempoTotalResolucionEnMinutos > (LlamadaCorrecta.Contrato.SLA.tiempoResolucionMaximoEnHoras * 60))
+  PendienteAsignacion --> PendienteAceptacionTecnico : asignarTecnico()\nafter(10min)
+  PendienteAceptacionTecnico --> DiagnosticoInSitu : aceptarIncidencia()
+  DiagnosticoInSitu --> DiagnosticoInSitu : aplicarProcedimiento()
+}
+
+DiagnosticoRemoto --> ResueltaRemotamente : accionRemota()\n[resuelve = true]
+DiagnosticoInSitu --> EscaladaAEspecialista : escalarIncidencia()
+DiagnosticoInSitu --> ParcialmenteResuelta : when\n(tiempoTotalResolucionEnMinutos > (LlamadaCorrecta.Contrato.SLA.tiempoResolucionMaximoEnHoras * 60))
+DiagnosticoInSitu --> ParcialmenteResuelta : faltanMateriales()
+DiagnosticoInSitu --> ResueltaInSitu : resolverIncidencia()
+
+state ResueltaRemotamente
+state EscaladaAEspecialista
+state ParcialmenteResuelta
+state ResueltaInSitu
+
+ResueltaRemotamente --> [*]
+EscaladaAEspecialista --> [*] : rellenarParte()
+ParcialmenteResuelta --> [*] : rellenarParte()
+ResueltaInSitu --> [*] : rellenarParte()
+
+@enduml

@@ -1,0 +1,181 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+
+/*Proyecto realizado por el grupo 12*/
+
+.contenedor {
+    /* Cada contenedor tiene las siguientes cosas*/
+            display: flex;/*Para alinear las cosas*/
+            flex-direction: column;/*En columnas*/
+            align-items: center;/*Alinea en el centro*/
+            min-height: 100vh;
+            width: 100%;/*100% de ancho*/
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            gap: 30px;
+    
+}
+
+header{
+    
+    width: 100%;
+    background-color: white;
+    display: flex;
+    align-items: center;/*alineacion en el centro*/
+    justify-content: space-between;
+    padding: 15px 30px;
+    border-bottom: 3px solid black;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.logo { 
+    /* Altura del logo*/
+    height: 50px; 
+}
+
+h1{
+    
+    position: absolute;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 24px;
+    margin: 0;
+    pointer-events: none;
+    
+}
+
+.btn-logout{
+    
+    border: 3px solid black;/*borde negro para indicar que es boton*/
+    background: white;
+    padding: 8px 15px;
+    font-weight: bold;   
+}
+
+.contenedor-puesto{
+            width: 100%;
+            background-color: white;/*color de fondo*/
+            border: 2px solid #4a90e2;/* las esquinas se redondean*/
+            border-radius: 50px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 12px;
+            font-weight: bold;/*escribimos en negrita*/
+            font-size: 18px;
+    
+}
+
+.btn-equipo {
+            background-color: #d9534f;
+            color: white;
+            border: none;
+            padding: 12px 40px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            box-shadow: 0px 4px 0px #a94442;
+            text-decoration: none;
+}
+/*Cuando pasas el raton por encima*/
+.btn-equipo:hover { 
+            background-color: #c9302c; /*Aplicacion de un fondo*/
+}
+/* Estilos para el boton de partidos*/
+.partidos-boton {
+            width: 100%;/*Ocupa el 100% de anchura*/
+            max-width: 450px;/*Maximo 450 pixeles*/
+            border: 3px solid black;
+            border-radius: 40px;
+            padding: 25px;
+            margin-top: 10px;
+            background-color: white;
+            text-align: center;
+            text-decoration: none;
+}
+/*Cuando pasas el raton por enicma*/
+.partidos-boton:hover { 
+    background-color: #f9f9f9; /*toma un colorcilo para indicar que es clickable*/
+}
+
+.partidos-boton h2 {
+            display: block; 
+            margin: 0 auto 5px auto;/*0 de margen */
+            text-decoration: underline;
+            font-size: 20px;
+            color: black;
+}
+
+.jornada-sub {
+            display: block;
+            color: #777;
+            font-weight: bold;
+            margin-bottom: 20px;
+            font-size: 14px;
+            text-decoration: underline;
+            text-align: center;
+}
+
+
+.tabla-partidos td {
+            padding: 8px 0;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 14px;
+}
+
+
+.tabla-partidos {
+    width: 100%;
+    border-collapse: collapse;
+    color: black;
+    margin: 0 auto;
+    table-layout: fixed; 
+}
+
+/* Equipo Local */
+.local { 
+    width: 42%; 
+    text-align: right; 
+    vertical-align: middle; 
+    padding-right: 5px;
+    white-space: nowrap; 
+}
+
+/* Marcador */
+.vs { 
+    width: 16%; 
+    text-align: center; 
+    vertical-align: middle; 
+}
+
+/* Equipo Visitante */       
+.visitante { 
+    width: 42%; 
+    text-align: left; 
+    vertical-align: middle; 
+    padding-left: 5px;
+    white-space: nowrap; 
+}
+
+/* Escudos */
+.escudo-calendario {
+    width: 30px;
+    height: 30px;
+    object-fit: contain; 
+    vertical-align: middle; 
+}
+
+
+.local .escudo-calendario {
+    margin-right: 8px;
+}
+
+.visitante .escudo-calendario {
+    margin-left: 8px;
+}

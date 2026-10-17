@@ -1,0 +1,49 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+
+
+/* =========================================
+   ESTILOS PARA LA CABECERA DE ERROR
+   ========================================= */
+header {
+    position: relative; 
+    text-align: center; 
+    padding: 20px 0;    
+    background-color: #f8f9fa; 
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
+}
+
+header .logo {
+    position: absolute;
+    top: 50%; 
+    left: 30px; 
+    transform: translateY(-50%); 
+    max-width: 80px; 
+    height: auto;
+    transition: transform 0.2s; 
+}
+
+
+header .logo:hover {
+    transform: translateY(-50%) scale(1.05); 
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    color: #1e3d59; 
+}
+
+
+.error-container {
+    text-align: center;
+    background-color: white;
+    padding: 40px;
+    border: 3px solid #1e3d59;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 50px auto;
+    box-shadow: 4px 4px 0px rgba(0,0,0,0.1);
+}

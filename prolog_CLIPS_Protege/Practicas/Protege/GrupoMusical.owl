@@ -1,0 +1,92 @@
+Prefix(:=<http://www.semanticweb.org/usuario/ontologies/2021/10/grupoMusical#>)
+Prefix(gm:=<http://www.semanticweb.org/usuario/ontologies/2021/10/grupoMusical#>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+
+
+Ontology(<http://www.semanticweb.org/usuario/ontologies/2021/10/grupoMusical>
+
+Declaration(Class(gm:GrupoMusical))
+Declaration(Class(gm:Instrumento))
+Declaration(Class(gm:Musico))
+Declaration(Class(gm:Persona))
+Declaration(Class(gm:Trio))
+Declaration(ObjectProperty(gm:tieneComponentes))
+Declaration(ObjectProperty(gm:toca))
+Declaration(NamedIndividual(gm:Bateria1))
+Declaration(NamedIndividual(gm:Guitarra1))
+Declaration(NamedIndividual(gm:Juan))
+Declaration(NamedIndividual(gm:Luis))
+Declaration(NamedIndividual(gm:Pedro))
+Declaration(NamedIndividual(gm:Piano1))
+Declaration(NamedIndividual(gm:Rack))
+############################
+#   Object Properties
+############################
+
+# Object Property: gm:tieneComponentes (gm:tieneComponentes)
+
+ObjectPropertyRange(gm:tieneComponentes gm:Persona)
+
+# Object Property: gm:toca (gm:toca)
+
+ObjectPropertyDomain(gm:toca gm:Persona)
+ObjectPropertyRange(gm:toca gm:Instrumento)
+
+
+############################
+#   Classes
+############################
+
+# Class: gm:GrupoMusical (gm:GrupoMusical)
+
+EquivalentClasses(gm:GrupoMusical ObjectAllValuesFrom(gm:tieneComponentes gm:Musico))
+
+# Class: gm:Musico (gm:Musico)
+
+EquivalentClasses(gm:Musico ObjectIntersectionOf(gm:Persona ObjectSomeValuesFrom(gm:toca gm:Instrumento)))
+
+# Class: gm:Trio (gm:Trio)
+
+EquivalentClasses(gm:Trio ObjectExactCardinality(3 gm:tieneComponentes))
+
+
+############################
+#   Named Individuals
+############################
+
+# Individual: gm:Bateria1 (gm:Bateria1)
+
+
+# Individual: gm:Guitarra1 (gm:Guitarra1)
+
+
+# Individual: gm:Juan (gm:Juan)
+
+ObjectPropertyAssertion(gm:toca gm:Juan gm:Guitarra1)
+
+# Individual: gm:Luis (gm:Luis)
+
+ObjectPropertyAssertion(gm:toca gm:Luis gm:Piano1)
+
+# Individual: gm:Pedro (gm:Pedro)
+
+ObjectPropertyAssertion(gm:toca gm:Pedro gm:Bateria1)
+
+# Individual: gm:Piano1 (gm:Piano1)
+
+
+# Individual: gm:Rack (gm:Rack)
+
+ClassAssertion(ObjectAllValuesFrom(gm:tieneComponentes ObjectOneOf(gm:Juan gm:Luis gm:Pedro)) gm:Rack)
+ObjectPropertyAssertion(gm:tieneComponentes gm:Rack gm:Juan)
+ObjectPropertyAssertion(gm:tieneComponentes gm:Rack gm:Luis)
+ObjectPropertyAssertion(gm:tieneComponentes gm:Rack gm:Pedro)
+
+
+DifferentIndividuals(gm:Bateria1 gm:Guitarra1 gm:Piano1)
+DifferentIndividuals(gm:Juan gm:Luis gm:Pedro)
+)
